@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lampa.nnslvp.io/sitemap.xml 
