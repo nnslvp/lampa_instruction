@@ -121,6 +121,9 @@
         <div class="nav-brand">
           <a href="index.html">🎬 Lampa Guide</a>
         </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+        </button>
         <ul class="nav-list">
           <li><a href="index.html">Главная</a></li>
           <li><a href="guides.html">Руководства</a></li>
@@ -813,5 +816,14 @@
         </p>
       </div>
     </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('nav.nav');
+        navToggle.addEventListener('click', function() {
+          nav.classList.toggle('open');
+        });
+      });
+    </script>
   </body>
 </html>
