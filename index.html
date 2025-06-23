@@ -88,38 +88,7 @@
     <title>
       Настройка Lampa на всех устройствах - пошаговая инструкция 2025
     </title>
-    <style>
-      body {
-        background-color: #1a1a1a; /* Dark background color */
-        color: #ffffff; /* White text color */
-      }
-
-      header {
-        background-color: #333333; /* Dark grey background */
-        padding: 2rem 0;
-        text-align: center;
-      }
-
-      main {
-        background-color: #262626; /* Slightly lighter grey for main content */
-        padding: 2rem !important;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      }
-
-      a {
-        color: #1e90ff; /* Dodger blue for links */
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      code {
-        background: #1a1a1a;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
 
     <!-- Yandex.RTB -->
     <script>
@@ -152,23 +121,11 @@
       <div class="container">
         <h1>Настройка Lampa для просмотра фильмов и сериалов</h1>
         <nav>
-          <ul
-            style="
-              list-style: none;
-              display: flex;
-              justify-content: center;
-              padding: 0;
-              margin-top: 1rem;
-            "
-          >
-            <li style="margin: 0 15px"><a href="#description">Описание</a></li>
-            <li style="margin: 0 15px"><a href="#steps">Инструкция</a></li>
-            <li style="margin: 0 15px">
-              <a href="#additional-info">Поддержка</a>
-            </li>
-            <li style="margin: 0 15px">
-              <a href="faq.html">FAQ</a>
-            </li>
+          <ul>
+            <li><a href="index.html" class="active">Главная</a></li>
+            <li><a href="guides.html">Руководства</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
           </ul>
         </nav>
       </div>
@@ -180,18 +137,28 @@
         content="Пошаговая инструкция по настройке приложения Lampa для просмотра фильмов и сериалов на различных устройствах"
       />
 
-      <section id="description">
-        <h2>Описание</h2>
-        <p itemprop="description">
-          Lampa – это приложение-каталог фильмов и сериалов с возможностью
-          расширения функционала с помощью плагинов. Например, можно добавить
-          агрегацию торрент-трекеров, парсинг сайтов для просмотра фильмов и
-          сериалов онлайн (типа hdrezka), или доступ к множеству телеканалов
-          онлайн. В итоге вы получаете свободный доступ к контенту, аналогичному
-          Netflix или Кинопоиск, но с большим количеством сериалов и фильмов.
-        </p>
-        <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
-          <meta itemprop="name" content="Приложение Lampa" />
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h2>🎬 Превратите любое устройство в домашний кинотеатр</h2>
+          <p class="hero-description">
+            Настройте Lampa за 5 минут и получите доступ к тысячам фильмов и сериалов. 
+            Работает на всех устройствах: от смартфона до Smart TV.
+          </p>
+          <div class="hero-features">
+            <div class="feature-item">
+              <span class="feature-icon">📱</span>
+              <span>Все устройства</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🔌</span>
+              <span>Расширяемость</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🆓</span>
+              <span>Бесплатно</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -209,115 +176,268 @@
         <!-- End Yandex.RTB R-A-15996724-1 -->
       </section>
 
-      <section id="steps">
-        <h2>Шаги настройки</h2>
 
-        <article
-          itemprop="step"
-          itemscope
-          itemtype="https://schema.org/HowToStep"
-        >
-          <link itemprop="url" href="#step1" />
-          <meta itemprop="name" content="Установка приложения Lampa" />
-          <h3 id="step1">1. Установка приложения</h3>
-          <div
-            itemprop="itemListElement"
-            itemscope
-            itemtype="https://schema.org/HowToDirection"
-          >
-            <ol>
-              <li>
-                Найдите приложение Lampa в магазине приложений (Play Market, LG
-                Store, App Store), либо на
-                <a href="https://github.com/lampa-app/LAMPA/releases"
-                  >официальном сайте</a
-                >.
-                <ul>
-                  <li>
-                    Если не нашли, попробуйте установить приложение Media
-                    Station X.
-                  </li>
-                  <li>
-                    После установки Media Station X, в Settings -> Start
-                    Parameter укажите плейлист: <code>lampa.mx</code>.
-                  </li>
-                </ul>
-              </li>
-            </ol>
+      <!-- Внутренняя навигация по странице -->
+      <nav class="page-nav">
+        <h3>Содержание руководства:</h3>
+        <ul>
+          <li><a href="#description">Что такое Lampa</a></li>
+          <li><a href="#steps">Пошаговая настройка</a></li>
+          <li><a href="#additional-info">Помощь и поддержка</a></li>
+        </ul>
+      </nav>
+
+      <section id="description" class="content-card">
+        <h2>Что такое Lampa?</h2>
+        <p itemprop="description">
+          Lampa – это мощное приложение-каталогизатор фильмов и сериалов с системой плагинов. 
+          Благодаря расширениям можно добавить поддержку торрент-трекеров, онлайн-кинотеатров 
+          и IPTV-каналов. Результат – персональный медиацентр с контентом уровня Netflix, 
+          но с гораздо большей библиотекой.
+        </p>
+        
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <h4>🎭 Огромная библиотека</h4>
+            <p>Доступ к фильмам и сериалам со всего мира</p>
           </div>
-          <p>На этом этапе у вас должно быть запущено приложение Lampa.</p>
-        </article>
-
-        <article>
-          <h3>2. Настройка отображения постеров</h3>
-          <ol>
-            <li>Откройте настройки (шестерёнка на верхней панели).</li>
-            <li>Пролистайте вниз и откройте вкладку "Расширения".</li>
-            <li>Среди доступных расширений найдите и установите TMDB Proxy.</li>
-            <li>
-              Перезагрузите приложение – постеры должны начать отображаться
-              корректно.
-            </li>
-          </ol>
-        </article>
-
-        <article>
-          <h3>3. Установка плагинов для функционала Netflix/Кинопоиск</h3>
+          <div class="benefit-item">
+            <h4>⚡ Быстрая настройка</h4>
+            <p>Настройка занимает всего несколько минут</p>
+          </div>
+          <div class="benefit-item">
+            <h4>🔧 Гибкость</h4>
+            <p>Настраивается под ваши потребности</p>
+          </div>
+          <div class="benefit-item">
+            <h4>🌐 Кроссплатформенность</h4>
+            <p>Работает на Android, iOS, Smart TV</p>
+          </div>
+        </div>
+        
+        <div class="server-info">
+          <h3>🌐 Доступные сервера Lampa</h3>
           <p>
-            Мы будем использовать каталог пиратских плагинов для того чтобы не
-            устанавливать плагины вручную
+            Lampa не привязана к определённому серверу. При загрузке можно нажать ESC (или кнопку возврата) 
+            и выбрать любой из доступных адресов:
           </p>
-          <ol>
-            <li>Откройте настройки (шестерёнка на верхней панели).</li>
-            <li>Пролистайте вниз и откройте вкладку "Расширения".</li>
-            <li>Нажмите "Добавить плагин".</li>
-            <li>
-              Введите адрес плагина:
-              <code>https://skaztv.online/store.js</code> или
-              <code>https://lampaplugins.github.io/store/store.js</code>
-              (если первая ссылка не работает, попробуйте вторую).
-            </li>
-            <li>
-              Сохраните – теперь в настройках появится вкладка "Пиратские
-              плагины".
-            </li>
-            <li>
-              В новой вкладке выберите нужные плагины.
-              <ul>
-                <li>
-                  Рекомендуется установить "Онлайн Мод" от @anton_t – после
-                  установки этого плагина появится возможность смотреть онлайн
-                  сериалы и фильмы.
-                </li>
-              </ul>
-            </li>
-          </ol>
-          <p>
-            На этом этапе вы уже можете смотреть свои фильмы и сериалы онлайн.
-          </p>
-        </article>
+          <div class="server-list">
+            <div class="server-item">
+              <span class="server-icon">🏠</span>
+              <div>
+                <strong>lampa.mx</strong>
+                <small>Основной сервер</small>
+              </div>
+            </div>
+            <div class="server-item">
+              <span class="server-icon">🚀</span>
+              <div>
+                <strong>cf.lampa.mx</strong>
+                <small>CloudFlare CDN</small>
+              </div>
+            </div>
+            <div class="server-item">
+              <span class="server-icon">⚡</span>
+              <div>
+                <strong>bylampa.online</strong>
+                <small>Альтернативный сервер</small>
+              </div>
+            </div>
+            <div class="server-item">
+              <span class="server-icon">🔄</span>
+              <div>
+                <strong>khuyampa.best</strong>
+                <small>Резервный сервер</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
+          <meta itemprop="name" content="Приложение Lampa" />
+        </div>
       </section>
 
-      <section id="additional-info">
-        <h2>Дополнительная информация</h2>
-        <p>
-          Вопросы вы можете задать в нашем Telegram чате:
-          <a
-            href="http://t.me/lampatv_support"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://t.me/lampatv_support</a
-          >.
-        </p>
-        <p>
-          Ознакомьтесь с <a href="faq.html">часто задаваемыми вопросами</a> о
-          приложении Lampa.
-        </p>
+      <section id="steps">
+        <h2>Пошаговая настройка Lampa</h2>
+
+        <div class="steps-container">
+          <article
+            class="step-card"
+            itemprop="step"
+            itemscope
+            itemtype="https://schema.org/HowToStep"
+          >
+            <link itemprop="url" href="#step1" />
+            <meta itemprop="name" content="Установка приложения Lampa" />
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3 id="step1">Установка приложения</h3>
+              <div
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/HowToDirection"
+              >
+                <p class="step-description">
+                  Скачайте и установите Lampa на ваше устройство из официальных источников.
+                </p>
+                <div class="instruction-list">
+                  <div class="instruction-item">
+                    <span class="instruction-icon">🔍</span>
+                    <div>
+                      <strong>Поиск приложения:</strong> Найдите Lampa в магазине приложений 
+                      (Play Market, LG Store, App Store) или на 
+                      <a href="https://github.com/lampa-app/LAMPA/releases" target="_blank">официальном сайте</a>
+                    </div>
+                  </div>
+                  <div class="instruction-item">
+                    <span class="instruction-icon">📦</span>
+                    <div>
+                      <strong>Альтернатива:</strong> Если не найдете Lampa, установите 
+                      <strong>Media Station X</strong> и в настройках (Settings → Start Parameter) 
+                      укажите: <code>lampa.mx</code>
+                    </div>
+                  </div>
+                </div>
+                <div class="step-result">
+                  ✅ Результат: У вас должно быть запущено приложение Lampa
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Настройка отображения постеров</h3>
+              <p class="step-description">
+                Подключите TMDB Proxy для корректного отображения обложек фильмов и сериалов.
+              </p>
+              <div class="instruction-list">
+                <div class="instruction-item">
+                  <span class="instruction-icon">⚙️</span>
+                  <div>Откройте <strong>Настройки</strong> (иконка шестерёнки)</div>
+                </div>
+                <div class="instruction-item">
+                  <span class="instruction-icon">🧩</span>
+                  <div>Перейдите в раздел <strong>"Расширения"</strong></div>
+                </div>
+                <div class="instruction-item">
+                  <span class="instruction-icon">⬇️</span>
+                  <div>Найдите и установите <strong>TMDB Proxy</strong></div>
+                </div>
+                <div class="instruction-item">
+                  <span class="instruction-icon">🔄</span>
+                  <div>Перезапустите приложение</div>
+                </div>
+              </div>
+              <div class="step-result">
+                ✅ Результат: Постеры фильмов и сериалов отображаются корректно
+              </div>
+            </div>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Установка плагинов для просмотра</h3>
+              <p class="step-description">
+                Добавьте магазин плагинов для получения доступа к контенту.
+              </p>
+              <div class="instruction-list">
+                <div class="instruction-item">
+                  <span class="instruction-icon">🏪</span>
+                  <div>
+                    В разделе <strong>"Расширения"</strong> нажмите <strong>"Добавить плагин"</strong>
+                  </div>
+                </div>
+                <div class="instruction-item">
+                  <span class="instruction-icon">🔗</span>
+                  <div>
+                    Введите адрес магазина плагинов:<br>
+                    <code class="code-highlight">https://skaztv.online/store.js</code><br>
+                    <small>Или резервный: <code>https://lampaplugins.github.io/store/store.js</code></small>
+                  </div>
+                </div>
+                <div class="instruction-item">
+                  <span class="instruction-icon">💾</span>
+                  <div>Сохраните настройки</div>
+                </div>
+                <div class="instruction-item">
+                  <span class="instruction-icon">📥</span>
+                  <div>
+                    В новой вкладке <strong>"Пиратские плагины"</strong> установите 
+                    <strong>"Онлайн Мод"</strong> от @anton_t
+                  </div>
+                </div>
+              </div>
+              <div class="step-result">
+                🎉 Поздравляем! Теперь вы можете смотреть фильмы и сериалы онлайн
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="additional-info" class="content-card">
+        <h2>Помощь и поддержка</h2>
+        
+        <div class="support-grid">
+          <div class="support-item">
+            <div class="support-icon">💬</div>
+            <h3>Telegram поддержка</h3>
+            <p>Получите быструю помощь от сообщества и экспертов</p>
+            <a href="http://t.me/lampatv_support" target="_blank" rel="noopener noreferrer" class="btn">
+              Присоединиться к чату
+            </a>
+          </div>
+          
+          <div class="support-item">
+            <div class="support-icon">❓</div>
+            <h3>Частые вопросы</h3>
+            <p>Ответы на самые популярные вопросы о настройке</p>
+            <a href="faq.html" class="btn btn-secondary">
+              Читать FAQ
+            </a>
+          </div>
+          
+          <div class="support-item">
+            <div class="support-icon">📚</div>
+            <h3>Дополнительные руководства</h3>
+            <p>Расширенные инструкции для опытных пользователей</p>
+            <a href="guides.html" class="btn btn-secondary">
+              Открыть руководства
+            </a>
+          </div>
+        </div>
+        
+        <div class="quick-links">
+          <h3>🔗 Полезные ссылки</h3>
+          <div class="links-grid">
+            <a href="https://github.com/lampa-app/LAMPA" target="_blank" rel="noopener noreferrer" class="quick-link">
+              <span class="link-icon">📦</span>
+              <span>Официальный репозиторий</span>
+            </a>
+            <a href="https://github.com/lampa-app/LAMPA/releases" target="_blank" rel="noopener noreferrer" class="quick-link">
+              <span class="link-icon">⬇️</span>
+              <span>Скачать последнюю версию</span>
+            </a>
+            <a href="contacts.html" class="quick-link">
+              <span class="link-icon">📞</span>
+              <span>Контактная информация</span>
+            </a>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
       <div class="container">
         <p>© 2025 Инструкция по настройке Lampa. Все права защищены.</p>
+        <p>
+          <a href="privacy.html">Политика конфиденциальности</a> | 
+          <a href="terms.html">Пользовательское соглашение</a> | 
+          <a href="contacts.html">Контакты</a>
+        </p>
       </div>
     </footer>
   </body>
