@@ -125,8 +125,16 @@
       </section>
 
       <!-- Casino Advertisement -->
-      <section class="casino-ad" style="text-align: center; margin: 20px 0;">
+      <section class="casino-ad" id="casino-ad" style="text-align: center; margin: 20px 0;">
+        <div class="ad-controls" style="text-align: right; margin-bottom: 10px;">
+          <button id="hide-ads-btn" class="ad-control-btn" style="background: #333; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 12px;">Скрыть рекламу</button>
+        </div>
         <a href="https://1wilib.life/?p=lx4t" target="_blank"><img src="https://1win-partners.com/promo-files-uploads/8c0c00aa72a37ce52c70e6f100bf587fbb6da8e58805f27abe.jpg" /></a>
+      </section>
+
+      <!-- Show ads button (hidden by default) -->
+      <section class="show-ads-section" id="show-ads-section" style="text-align: center; margin: 20px 0; display: none;">
+        <button id="show-ads-btn" class="ad-control-btn" style="background: #666; color: white; border: none; padding: 8px 15px; border-radius: 3px; cursor: pointer; font-size: 12px;">Показать рекламу</button>
       </section>
 
       <!-- Внутренняя навигация по странице -->
@@ -573,12 +581,74 @@
       </div>
     </footer>
     <script>
+      // Cookie functions
+      function setCookie(name, value, days) {
+        const expires = new Date();
+        expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+        document.cookie = name + '=' + value + ';expires=' + expires.toUTCString() + ';path=/';
+      }
+
+      function getCookie(name) {
+        const nameEQ = name + '=';
+        const ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      }
+
+      // Ad management
+      function hideAds() {
+        const casinoAd = document.getElementById('casino-ad');
+        const showAdsSection = document.getElementById('show-ads-section');
+        const yandexAd = document.getElementById('yandex_rtb_R-A-15996724-1');
+        
+        if (casinoAd) casinoAd.style.display = 'none';
+        if (yandexAd) yandexAd.parentElement.style.display = 'none';
+        if (showAdsSection) showAdsSection.style.display = 'block';
+        
+        setCookie('hideAds', 'true', 30);
+      }
+
+      function showAds() {
+        const casinoAd = document.getElementById('casino-ad');
+        const showAdsSection = document.getElementById('show-ads-section');
+        const yandexAd = document.getElementById('yandex_rtb_R-A-15996724-1');
+        
+        if (casinoAd) casinoAd.style.display = 'block';
+        if (yandexAd) yandexAd.parentElement.style.display = 'block';
+        if (showAdsSection) showAdsSection.style.display = 'none';
+        
+        setCookie('hideAds', 'false', 30);
+      }
+
       document.addEventListener('DOMContentLoaded', function() {
+        // Navigation toggle
         const navToggle = document.querySelector('.nav-toggle');
         const nav = document.querySelector('nav.nav');
         navToggle.addEventListener('click', function() {
           nav.classList.toggle('open');
         });
+
+        // Ad controls
+        const hideAdsBtn = document.getElementById('hide-ads-btn');
+        const showAdsBtn = document.getElementById('show-ads-btn');
+
+        if (hideAdsBtn) {
+          hideAdsBtn.addEventListener('click', hideAds);
+        }
+
+        if (showAdsBtn) {
+          showAdsBtn.addEventListener('click', showAds);
+        }
+
+        // Check cookie on page load
+        const hideAdsState = getCookie('hideAds');
+        if (hideAdsState === 'true') {
+          hideAds();
+        }
       });
     </script>
   </body>
