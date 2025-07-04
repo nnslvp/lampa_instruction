@@ -90,12 +90,7 @@
     </title>
     <link rel="stylesheet" href="styles.css" />
 
-    <!-- Yandex.RTB -->
-    <script>
-      window.yaContextCb = window.yaContextCb || [];
-    </script>
-    <script src="https://yandex.ru/ads/system/context.js" async></script>
-    <!-- End Yandex.RTB -->
+
   </head>
 
   <!-- Google Tag Manager -->
@@ -166,26 +161,14 @@
         </div>
       </section>
 
-      <section>
-        <!-- Yandex.RTB R-A-15996724-1 -->
-        <div id="yandex_rtb_R-A-15996724-1"></div>
-        <script>
-          window.yaContextCb.push(() => {
-            Ya.Context.AdvManager.render({
-              blockId: "R-A-15996724-1",
-              renderTo: "yandex_rtb_R-A-15996724-1",
-            });
-          });
-        </script>
-        <!-- End Yandex.RTB R-A-15996724-1 -->
-      </section>
+
 
       <!-- Casino Advertisement -->
       <section class="casino-ad" id="casino-ad" style="text-align: center; margin: 20px 0;">
         <div class="ad-controls" style="text-align: right; margin-bottom: 10px;">
           <button id="hide-ads-btn" class="ad-control-btn" style="background: #333; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 12px;">Скрыть рекламу</button>
         </div>
-        <a href="https://1wilib.life/?p=lx4t" target="_blank"><img src="https://1win-partners.com/promo-files-uploads/196b505b1a71d41dc419430aa23345511533d7436e5b1cace2.jpg" /></a>
+        <a href="https://1wilib.life/casino/list?open=register&p=lx4t" target="_blank"><img src="https://1win-partners.com/promo-files-uploads/196b505b1a71d41dc419430aa23345511533d7436e5b1cace2.jpg" /></a>
       </section>
 
       <!-- Show ads button (hidden by default) -->
@@ -489,10 +472,7 @@
       function hideAds() {
         const casinoAd = document.getElementById('casino-ad');
         const showAdsSection = document.getElementById('show-ads-section');
-        const yandexAd = document.getElementById('yandex_rtb_R-A-15996724-1');
-        
         if (casinoAd) casinoAd.style.display = 'none';
-        if (yandexAd) yandexAd.parentElement.style.display = 'none';
         if (showAdsSection) showAdsSection.style.display = 'block';
         
         setCookie('hideAds', 'true', 30); // Save for 30 days
@@ -501,10 +481,7 @@
       function showAds() {
         const casinoAd = document.getElementById('casino-ad');
         const showAdsSection = document.getElementById('show-ads-section');
-        const yandexAd = document.getElementById('yandex_rtb_R-A-15996724-1');
-        
         if (casinoAd) casinoAd.style.display = 'block';
-        if (yandexAd) yandexAd.parentElement.style.display = 'block';
         if (showAdsSection) showAdsSection.style.display = 'none';
         
         setCookie('hideAds', 'false', 30);
