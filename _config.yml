@@ -11,6 +11,12 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+# Collections
+collections:
+  plugins:
+    output: true
+    permalink: /plugins/:name.html
+
 # Простой статический сайт - дополнительные настройки не нужны
 
 # Exclude from processing

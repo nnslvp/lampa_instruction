@@ -1,0 +1,197 @@
+---
+layout: default
+---
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-content">
+    <h2>🧩 {{ page.title }}</h2>
+    <p class="hero-description">
+      {{ page.description }}
+    </p>
+    <div class="hero-features">
+      <div class="feature-item">
+        <span class="feature-icon">{{ page.icon }}</span>
+        <span>{{ page.category }}</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">{{ page.status_icon }}</span>
+        <span>{{ page.status }}</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🔗</span>
+        <span>Готов к установке</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Навигация -->
+<nav class="page-nav">
+  <h3>Содержание:</h3>
+  <ul>
+    <li><a href="#installation">Установка</a></li>
+    <li><a href="#features">Возможности</a></li>
+    <li><a href="#info">Дополнительная информация</a></li>
+    <li><a href="/plugins.html">← Вернуться к каталогу</a></li>
+  </ul>
+</nav>
+
+<!-- Основная информация -->
+<section id="installation" class="content-card">
+  <h2>🔧 Установка плагина</h2>
+  <p>Для установки плагина {{ page.title }} выполните следующие шаги:</p>
+  
+  <div class="steps-container">
+    <article class="step-card">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h3>Скопируйте URL плагина</h3>
+        <div class="code-highlight">
+          <code id="plugin-url">{{ page.url_plugin }}</code>
+          <button onclick="copyToClipboard('plugin-url')" class="btn btn-secondary">📋 Копировать</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="step-card">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h3>Добавьте плагин в Lampa</h3>
+        <div class="instruction-list">
+          <div class="instruction-item">
+            <span class="instruction-icon">⚙️</span>
+            <div>Откройте <strong>Настройки</strong> в Lampa</div>
+          </div>
+          <div class="instruction-item">
+            <span class="instruction-icon">🧩</span>
+            <div>Перейдите в раздел <strong>Расширения</strong></div>
+          </div>
+          <div class="instruction-item">
+            <span class="instruction-icon">➕</span>
+            <div>Нажмите <strong>"Добавить плагин"</strong></div>
+          </div>
+          <div class="instruction-item">
+            <span class="instruction-icon">📝</span>
+            <div>Вставьте скопированный URL</div>
+          </div>
+          <div class="instruction-item">
+            <span class="instruction-icon">✅</span>
+            <div>Нажмите <strong>"Готово"</strong> и перезапустите Lampa</div>
+          </div>
+        </div>
+      </div>
+    </article>
+        </div>
+      </section>
+
+<!-- Возможности плагина -->
+<section id="features" class="content-card">
+  <h2>⚡ Возможности плагина</h2>
+  {% if page.features %}
+    <div class="benefits-grid">
+      {% for feature in page.features %}
+        <div class="benefit-item">
+          <h4>{{ feature.icon }} {{ feature.title }}</h4>
+          <p>{{ feature.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+      </section>
+
+      <!-- Дополнительная информация -->
+<section id="info" class="content-card">
+  <h2>📋 Информация о плагине</h2>
+  
+  <div class="info-cards">
+    <div class="info-card">
+      <h3>📊 Статус</h3>
+      <p><strong>{{ page.status }}</strong></p>
+      {% if page.status_description %}
+        <p>{{ page.status_description }}</p>
+      {% endif %}
+    </div>
+
+    <div class="info-card">
+      <h3>🏷️ Категория</h3>
+      <p><strong>{{ page.category }}</strong></p>
+      </div>
+
+    {% if page.requirements %}
+    <div class="info-card">
+      <h3>⚠️ Требования</h3>
+      <ul>
+        {% for requirement in page.requirements %}
+          <li>{{ requirement }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+      </div>
+
+  {% if page.notes %}
+  <div class="warning-notice">
+    <h3>💡 Важные заметки</h3>
+    {% for note in page.notes %}
+      <p>{{ note }}</p>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+
+<!-- Комментарии VK -->
+<section class="comments-section">
+  <h2>💬 Комментарии</h2>
+  <div id="vk_comments"></div>
+</section>
+
+
+<!-- Поддержка -->
+<section class="support-section">
+  <h2>🆘 Нужна помощь?</h2>
+  <div class="support-cards">
+    <div class="support-card">
+      <h3>📚 Руководства</h3>
+      <p>Ознакомьтесь с <a href="/guides.html">подробными руководствами</a> по настройке Lampa</p>
+    </div>
+    <div class="support-card">
+      <h3>💬 Поддержка</h3>
+      <p>Обратитесь за помощью через <a href="/contacts.html">контакты</a></p>
+    </div>
+    <div class="support-card">
+      <h3>🔍 Другие плагины</h3>
+      <p>Изучите <a href="/plugins.html">полный каталог плагинов</a></p>
+      </div>
+  </div>
+</section>
+
+<script>
+function copyToClipboard(elementId) {
+  const element = document.getElementById(elementId);
+  const text = element.textContent;
+  
+  navigator.clipboard.writeText(text).then(function() {
+    // Показываем уведомление
+    const button = element.nextElementSibling;
+    const originalText = button.textContent;
+    button.textContent = '✅ Скопировано!';
+    button.style.background = 'var(--success)';
+    
+      setTimeout(() => {
+      button.textContent = originalText;
+      button.style.background = '';
+      }, 2000);
+  }).catch(function(err) {
+    console.error('Ошибка копирования: ', err);
+    });
+  }
+</script>
+
+<script type="text/javascript">
+        VK.init({
+        apiId: 53860142,
+        onlyWidgets: true
+      });
+  VK.Widgets.Comments('vk_comments');
+</script>
