@@ -1,0 +1,46 @@
+title: "Настройка Lampa на всех устройствах - пошаговая инструкция"
+description: "Подробная инструкция по настройке приложения Lampa для просмотра фильмов и сериалов на Android, iOS, LG WebOS, Samsung Tizen OS. Пошаговое руководство с плагинами."
+keywords: "Lampa, настройка Lampa, инструкция Lampa, фильмы и сериалы онлайн, плагин Lampa, TMDB Proxy, Media Station X, Android TV, LG WebOS, Samsung Tizen"
+url: "https://lampa.nnslvp.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /:basename.html
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Простой статический сайт - дополнительные настройки не нужны
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Include files
+include:
+  - _redirects
+
+# SEO settings
+author:
+  name: "Lampa Guide"
+  email: ""
+
+social:
+  name: "Lampa Guide"
+  links:
+    - "https://t.me/lampatv_support"
+
+# Sitemap settings
+sitemap:
+  exclude:
+    - /404.html
+  include: []
+  changefreq: weekly
+  priority: 0.8 

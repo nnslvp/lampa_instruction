@@ -1,98 +1,13 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe
-      src="https://www.googletagmanager.com/ns.html?id=GTM-5VKMRGJ9"
-      height="0"
-      width="0"
-      style="display: none; visibility: hidden"
-    ></iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Пользовательское соглашение сайта по настройке приложения Lampa. Условия использования сайта и ответственность сторон."
-    />
-    <meta name="robots" content="index, follow" />
-    
-    <link rel="canonical" href="https://lampa.nnslvp.io/terms.html" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="icons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="icons/favicon-16x16.png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
-
-    <title>Пользовательское соглашение - Инструкция по настройке Lampa</title>
-  </head>
-
-  <!-- Google Tag Manager -->
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({
-        "gtm.start": new Date().getTime(),
-        event: "gtm.js",
-      });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != "dataLayer" ? "&l=" + l : "";
-      j.async = true;
-      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, "script", "dataLayer", "GTM-5VKMRGJ9");
-  </script>
-  <!-- End Google Tag Manager -->
-
-  <body>
-    <header class="header">
-      <nav class="nav">
-        <div class="nav-brand">
-          <a href="index.html">🎬 Lampa Guide</a>
-        </div>
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          <span></span>
-        </button>
-        <ul class="nav-list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="guides.html">Руководства</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="plugins.html">Плагины</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="container">
+---
+layout: default
+title: "Пользовательское соглашение - Инструкция по настройке Lampa"
+description: "Пользовательское соглашение сайта по настройке приложения Lampa. Условия использования сайта и ответственность сторон."
+keywords: "пользовательское соглашение, Lampa, условия использования, ответственность"
+og_title: "Пользовательское соглашение - Инструкция по настройке Lampa"
+og_description: "Условия использования сайта и ответственность сторон."
+twitter_title: "Пользовательское соглашение - Инструкция по настройке Lampa"
+twitter_description: "Условия использования сайта и ответственность сторон."
+---
       <article>
         <p><strong>Дата последнего обновления:</strong> 15 января 2025 г.</p>
 
@@ -160,7 +75,7 @@
           <h2>6. Персональные данные</h2>
           <p>
             Обработка персональных данных пользователей осуществляется в соответствии 
-            с <a href="privacy.html">Политикой конфиденциальности</a>.
+            с <a href="/privacy/">Политикой конфиденциальности</a>.
           </p>
         </section>
 
@@ -188,30 +103,7 @@
             По всем вопросам, связанным с данным Соглашением, вы можете обратиться 
             к нам через наш официальный 
             <a href="http://t.me/lampatv_support" target="_blank" rel="noopener noreferrer">Telegram канал поддержки</a> 
-            или ознакомиться с контактной информацией на <a href="contacts.html">странице контактов</a>.
+            или ознакомиться с контактной информацией на <a href="/contacts/">странице контактов</a>.
           </p>
         </section>
-      </article>
-    </main>
-
-    <footer>
-      <div class="container">
-        <p>© 2025 Инструкция по настройке Lampa. Все права защищены.</p>
-        <p>
-          <a href="privacy.html">Политика конфиденциальности</a> | 
-          <a href="terms.html">Пользовательское соглашение</a> | 
-          <a href="contacts.html">Контакты</a>
-        </p>
-      </div>
-    </footer>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const navToggle = document.querySelector('.nav-toggle');
-        const nav = document.querySelector('nav.nav');
-        navToggle.addEventListener('click', function() {
-          nav.classList.toggle('open');
-        });
-      });
-    </script>
-  </body>
-</html> 
+      </article> 

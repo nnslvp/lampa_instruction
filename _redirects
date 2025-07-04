@@ -1,0 +1,10 @@
+# Redirects for old URLs without .html extension
+/plugins/ /plugins.html 301
+/faq/ /faq.html 301
+/guides/ /guides.html 301
+/contacts/ /contacts.html 301
+/privacy/ /privacy.html 301
+/terms/ /terms.html 301
+
+# Redirect root to index.html (optional)
+/ /index.html 301 
