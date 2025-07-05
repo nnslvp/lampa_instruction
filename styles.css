@@ -146,6 +146,7 @@ header .container {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: var(--spacing-lg);
+  position: relative;
 }
 
 .nav-brand a {
@@ -1589,21 +1590,36 @@ footer a:hover {
 
 .nav-toggle span::before {
   top: -8px;
+  transform: var(--before-transform, rotate(0deg) translate(0, 0));
 }
 
 .nav-toggle span::after {
   bottom: -8px;
+  transform: var(--after-transform, rotate(0deg) translate(0, 0));
 }
 
 /* Control nav-list visibility */
 nav.open .nav-list {
   display: flex !important;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
     margin-left: auto;
+    z-index: 1001;
   }
   .nav-list {
     display: none !important;
@@ -1613,12 +1629,25 @@ nav.open .nav-list {
     top: 100%;
     left: 0;
     width: 100%;
-    padding: var(--spacing-sm) 0;
+    padding: var(--spacing-md) 0;
     z-index: 1000;
+    border-top: 1px solid var(--border);
+    box-shadow: var(--shadow-lg);
   }
   .nav-list li {
-    margin: var(--spacing-sm) 0;
+    margin: 0;
     flex: 0 0 auto;
+  }
+  .nav-list a {
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-bottom: 1px solid var(--border-light);
+    transition: var(--transition-fast);
+  }
+  .nav-list a:hover {
+    background: var(--surface-hover);
+  }
+  .nav-list a:last-child {
+    border-bottom: none;
   }
 }
 
