@@ -112,6 +112,7 @@ twitter_description: "Каталог расширений для Lampa."
     {% assign store_plugins = site.plugins | where: "category", "Магазины" %}
     {% assign radio_plugins = site.plugins | where: "category", "Радио" %}
     {% assign special_plugins = site.plugins | where: "category", "Специальные" %}
+    {% assign adult_plugins = site.plugins | where: "category", "18+" %}
 
     <!-- Онлайн-просмотр -->
     <section id="online-plugins" class="plugin-category">
@@ -119,6 +120,15 @@ twitter_description: "Каталог расширений для Lampa."
       <p>Плагины для просмотра фильмов и сериалов из различных онлайн-источников.</p>
       
       <div class="plugin-grid">
+        {% for plugin in online_plugins %}
+        <div class="plugin-card">
+          <h3><a href="{{ plugin.url }}" class="plugin-link">{{ plugin.icon }} {{ plugin.title }}</a></h3>
+          <p>{{ plugin.description }}</p>
+          <code>{{ plugin.url_plugin }}</code>
+          <span class="plugin-status {% if plugin.status == 'Активен' %}active{% else %}warning{% endif %}">{{ plugin.status }}</span>
+        </div>
+        {% endfor %}
+        
         <!-- Дополнительные плагины без отдельных страниц -->
         
       </div>
@@ -130,6 +140,15 @@ twitter_description: "Каталог расширений для Lampa."
       <p>Плагины для работы с торрентами и TorrServer.</p>
       
       <div class="plugin-grid">
+        {% for plugin in torrent_plugins %}
+        <div class="plugin-card">
+          <h3><a href="{{ plugin.url }}" class="plugin-link">{{ plugin.icon }} {{ plugin.title }}</a></h3>
+          <p>{{ plugin.description }}</p>
+          <code>{{ plugin.url_plugin }}</code>
+          <span class="plugin-status {% if plugin.status == 'Активен' %}active{% else %}warning{% endif %}">{{ plugin.status }}</span>
+        </div>
+        {% endfor %}
+        
         <!-- Дополнительные торрент-плагины без отдельных страниц -->
         
       </div>
