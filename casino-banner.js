@@ -77,8 +77,14 @@ document.addEventListener('DOMContentLoaded', () => {
     showAdsSection.style.display = 'block';
   } else {
     showAdsSection.style.display = 'none';
-    // Показываем поп-ап с задержкой, чтобы не отпугнуть пользователя
-    setTimeout(showPopup, POPUP_DELAY_MS);
+    // Запускаем отсчёт задержки только после первого скрола страницы
+    window.addEventListener(
+      'scroll',
+      () => {
+        setTimeout(showPopup, POPUP_DELAY_MS);
+      },
+      { once: true }
+    );
   }
 
   /* ----------------------------------------
