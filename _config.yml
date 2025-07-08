@@ -50,3 +50,6 @@ sitemap:
   include: []
   changefreq: weekly
   priority: 0.8 
+
+canonical_url: true
+canonical_url_append: ".html"
