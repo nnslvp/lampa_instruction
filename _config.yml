@@ -6,7 +6,7 @@ baseurl: ""
 
 # Build settings
 markdown: kramdown
-permalink: /:basename.html
+permalink: /:basename
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
@@ -15,7 +15,7 @@ plugins:
 collections:
   plugins:
     output: true
-    permalink: /plugins/:name.html
+    permalink: /plugins/:name
 
 # Простой статический сайт - дополнительные настройки не нужны
 
@@ -45,11 +45,4 @@ social:
 
 # Sitemap settings
 sitemap:
-  exclude:
-    - /404.html
-  include: []
-  changefreq: weekly
-  priority: 0.8 
-
-canonical_url: true
-canonical_url_append: ".html"
+  changefreq: monthly
