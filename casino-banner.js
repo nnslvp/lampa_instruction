@@ -1,8 +1,12 @@
+// РЕКЛАМА ОТКЛЮЧЕНА
 // Управление полноэкранным поп-апом казино
 // Работает на всех страницах, где есть блок с id="casino-ad"
 // Показывается один раз, пока пользователь не скроет его (флаг в localStorage)
 
 document.addEventListener('DOMContentLoaded', () => {
+  // РЕКЛАМА ОТКЛЮЧЕНА - выходим из функции
+  return;
+  
   const casinoAd = document.getElementById('casino-ad');
   const hideAdsBtn = document.getElementById('hide-ads-btn');
   const showAdsSection = document.getElementById('show-ads-section');
