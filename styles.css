@@ -1822,6 +1822,119 @@ nav.open .nav-list {
   }
 }
 
+/* VPN CTA Block */
+.vpn-cta {
+  margin: var(--spacing-2xl) 0;
+  padding: 0;
+}
+
+.vpn-cta-content {
+  background: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 100%);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-3xl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.vpn-cta-content::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.vpn-cta-icon {
+  font-size: 64px;
+  flex-shrink: 0;
+  z-index: 1;
+  filter: drop-shadow(0 0 20px rgba(255,255,255,0.3));
+}
+
+.vpn-cta-text {
+  flex: 1;
+  z-index: 1;
+}
+
+.vpn-cta-text h3 {
+  color: white;
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-sm);
+}
+
+.vpn-cta-text p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+}
+
+.vpn-cta-button {
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.btn-vpn {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--font-size-lg);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-vpn:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(109, 40, 217, 0.4);
+}
+
+@media (max-width: 768px) {
+  .vpn-cta-content {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--spacing-2xl);
+  }
+
+  .vpn-cta-icon {
+    font-size: 48px;
+  }
+
+  .vpn-cta-text h3 {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .vpn-cta-content {
+    padding: var(--spacing-xl);
+  }
+
+  .vpn-cta-icon {
+    font-size: 40px;
+  }
+}
+
+/* Telegram CTA Small */
+.telegram-cta-small .telegram-cta-content {
+  padding: var(--spacing-xl) var(--spacing-2xl);
+}
+
+.telegram-cta-small .telegram-cta-icon {
+  display: none;
+}
+
 /* Telegram CTA Block */
 .telegram-cta {
   margin: var(--spacing-2xl) 0;
