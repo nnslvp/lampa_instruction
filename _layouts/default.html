@@ -1,75 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe
-      src="https://www.googletagmanager.com/ns.html?id=GTM-5VKMRGJ9"
-      height="0"
-      width="0"
-      style="display: none; visibility: hidden"
-    ></iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
     {% seo %}
-    
-    <meta name="msapplication-TileColor" content="#da532c" />
-
-    <!-- Sitemap -->
+    <meta name="msapplication-TileColor" content="#b45309" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/icons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/icons/favicon-16x16.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
     <link rel="manifest" href="/icons/site.webmanifest" />
-    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
-    />
-
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#b45309" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,700&family=DM+Sans:wght@400;500;600&display=swap" />
     <link rel="stylesheet" href="/styles.css" />
-    <script src="https://vk.com/js/api/openapi.js?169" type="text/javascript"></script>
-    
-    <!-- Yandex.RTB -->
-    <script>window.yaContextCb=window.yaContextCb||[]</script>
-    <script src="https://yandex.ru/ads/system/context.js" async></script>
   </head>
 
   <!-- Google Tag Manager -->
   <script>
     (function (w, d, s, l, i) {
       w[l] = w[l] || [];
-      w[l].push({
-        "gtm.start": new Date().getTime(),
-        event: "gtm.js",
-      });
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
       var f = d.getElementsByTagName(s)[0],
         j = d.createElement(s),
         dl = l != "dataLayer" ? "&l=" + l : "";
@@ -81,79 +31,46 @@
   <!-- End Google Tag Manager -->
 
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VKMRGJ9"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
     <header class="header">
       <nav class="nav">
         <div class="nav-brand">
-          <a href="/">🎬 Lampa Guide</a>
+          <a href="/">Lampa Guide</a>
         </div>
         <button class="nav-toggle" aria-label="Toggle navigation">
           <span></span>
         </button>
         <ul class="nav-list">
           <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Главная</a></li>
-          <li><a href="/guides" {% if page.url == "/guides/" %}class="active"{% endif %}>Руководства</a></li>
           <li><a href="/faq" {% if page.url == "/faq/" %}class="active"{% endif %}>FAQ</a></li>
-          <li><a href="/stability" {% if page.url == "/stability/" %}class="active"{% endif %}>Стабильность</a></li>
           <li><a href="/plugins" {% if page.url == "/plugins/" %}class="active"{% endif %}>Плагины</a></li>
+          <li><a href="/guides" {% if page.url == "/guides/" %}class="active"{% endif %}>Руководства</a></li>
           <li><a href="/contacts" {% if page.url == "/contacts/" %}class="active"{% endif %}>Контакты</a></li>
-          <li><a href="https://t.me/+0iNJ8wLZretiOThi" target="_blank" rel="noopener noreferrer" class="telegram-link">📱 Telegram</a></li>
-          <li><a href="https://vpn.nnslvp.io" target="_blank" rel="noopener noreferrer" class="vpn-link-nav">🌫 Дымка VPN</a></li>
+          <li><a href="https://t.me/+0iNJ8wLZretiOThi" target="_blank" rel="noopener noreferrer" class="telegram-link">Telegram</a></li>
         </ul>
       </nav>
     </header>
-    
+
     <main class="container">
-      <!-- Yandex.RTB R-A-15996724-3 -->
-      <div id="yandex-ad-desktop">
-        <script>
-        window.yaContextCb.push(() => {
-            Ya.Context.AdvManager.render({
-                "blockId": "R-A-15996724-3",
-                "type": "fullscreen",
-                "platform": "desktop"
-            })
-        })
-        </script>
-      </div>
-      
-      <!-- Yandex.RTB R-A-15996724-4 -->
-      <div id="yandex-ad-mobile">
-        <script>
-        window.yaContextCb.push(() => {
-            Ya.Context.AdvManager.render({
-                "blockId": "R-A-15996724-4",
-                "type": "fullscreen",
-                "platform": "touch"
-            })
-        })
-        </script>
-      </div>
-      
-      <!-- Yandex.RTB R-A-15996724-1 -->
-      <div id="yandex_rtb_R-A-15996724-1"></div>
-      <script>
-      window.yaContextCb.push(() => {
-          Ya.Context.AdvManager.render({
-              "blockId": "R-A-15996724-1",
-              "renderTo": "yandex_rtb_R-A-15996724-1"
-          })
-      })
-      </script>
-      
       {{ content }}
     </main>
-    
+
     <footer>
       <div class="container">
-        <p>© 2026 Инструкция по настройке Lampa. Все права защищены.</p>
+        <p>&copy; 2026 Инструкция по настройке Lampa. Все права защищены.</p>
         <p>
-          <a href="/privacy">Политика конфиденциальности</a> | 
-          <a href="/terms">Пользовательское соглашение</a> | 
+          <a href="/privacy">Политика конфиденциальности</a> |
+          <a href="/terms">Пользовательское соглашение</a> |
           <a href="/contacts">Контакты</a>
         </p>
       </div>
     </footer>
-    
+
     <script src="/navigation.js"></script>
   </body>
-</html> 
+</html>
