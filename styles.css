@@ -187,23 +187,24 @@ main.container {
   padding: var(--space-2);
 }
 
-.nav-toggle span,
-.nav-toggle span::before,
-.nav-toggle span::after {
+.nav-toggle span {
   display: block;
   width: 22px;
   height: 2px;
   background: var(--text);
+  position: relative;
   transition: transform 0.3s;
 }
-
-.nav-toggle span { position: relative; }
 
 .nav-toggle span::before,
 .nav-toggle span::after {
   content: '';
   position: absolute;
   left: 0;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  transition: transform 0.3s;
 }
 
 .nav-toggle span::before { top: -7px; }
