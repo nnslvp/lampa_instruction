@@ -649,6 +649,27 @@ footer a:hover { color: var(--accent); }
 .vpn-link, .vpn-link-highlighted { color: var(--accent); font-weight: 600; }
 .vpn-link:hover, .vpn-link-highlighted:hover { color: var(--accent-hover); }
 
+/* === SUPPORT ICON === */
+.support-icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-3);
+}
+
+/* === QUICK LINKS === */
+.quick-links {
+  margin-top: var(--space-8);
+}
+
+.quick-links h3 { margin-bottom: var(--space-4); }
+
+/* === TELEGRAM CTA SMALL === */
+.telegram-cta-small {
+  padding: var(--space-4) var(--space-6);
+}
+
+/* === TEXT ALIGN UTILITY === */
+.text-center { text-align: center; }
+
 /* === CONTACT === */
 .contact-item {
   background: var(--bg-surface);
