@@ -672,6 +672,10 @@ footer a:hover { color: var(--accent); }
 .text-center { text-align: center; }
 
 /* === CONTACT === */
+.contact-methods {
+  display: block;
+}
+
 .contact-item {
   background: var(--bg-surface);
   border: 1px solid var(--border);
@@ -680,8 +684,19 @@ footer a:hover { color: var(--accent); }
 }
 
 .contact-link {
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: inline-block;
+  margin: var(--space-2) 0;
+}
+
+/* Contact page sections */
+article > section {
+  margin-bottom: var(--space-6);
+}
+
+article > section > h2 {
+  margin-bottom: var(--space-4);
 }
 
 /* === RESPONSIVE === */
