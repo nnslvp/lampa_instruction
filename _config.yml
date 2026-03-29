@@ -1,8 +1,11 @@
-title: "Настройка Lampa на всех устройствах - пошаговая инструкция"
-description: "Подробная инструкция по настройке приложения Lampa для просмотра фильмов и сериалов на Android, iOS, LG WebOS, Samsung Tizen OS. Пошаговое руководство с плагинами."
-keywords: "Lampa, настройка Lampa, инструкция Lampa, фильмы и сериалы онлайн, плагин Lampa, TMDB Proxy, Media Station X, Android TV, LG WebOS, Samsung Tizen"
+title: "Lampa — настройка на всех устройствах"
+description: "Актуальные плагины для Lampa 2026 — рабочие в России. Пошаговая настройка на Smart TV, Android, iOS. 77 проверенных плагинов с описаниями."
+keywords: "плагины для lampa, плагины для lampa 2026, lampa настройка, lampa скачать, рабочие плагины для lampa, lampa tv, lampa apk"
 url: "https://lampa.nnslvp.io"
 baseurl: ""
+locale: "ru_RU"
+lang: "ru"
+
 
 # Build settings
 markdown: kramdown

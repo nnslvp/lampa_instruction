@@ -33,3 +33,5 @@ Thumbs.db
 *.temp
 .claude/settings.local.json
 .superpowers/
+seo-workspace/
+.playwright-mcp/

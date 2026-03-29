@@ -359,7 +359,8 @@ footer a:hover { color: var(--accent); }
 .vpn-cta-text h3, .telegram-cta-text h3, .proxy-cta-text h3 { margin-bottom: var(--space-2); }
 .vpn-cta-text p, .telegram-cta-text p, .proxy-cta-text p { margin-bottom: 0; }
 
-.vpn-cta-button, .telegram-cta-button, .proxy-cta-button { flex-shrink: 0; }
+.vpn-cta-text, .telegram-cta-text, .proxy-cta-text { flex: 1; min-width: 0; }
+.vpn-cta-button, .telegram-cta-button, .proxy-cta-button { flex-shrink: 0; align-self: center; }
 
 /* === BUTTONS === */
 .btn, .btn-vpn, .btn-telegram, .btn-proxy, .btn-secondary {
@@ -444,12 +445,72 @@ footer a:hover { color: var(--accent); }
 
 .faq-item h4 { margin-top: var(--space-4); }
 
+.faq-list { display: flex; flex-direction: column; gap: var(--space-3); }
+
+details.faq-item {
+  cursor: pointer;
+}
+
+details.faq-item summary {
+  font-weight: 600;
+  font-size: 1.0625rem;
+  padding: var(--space-3) var(--space-4);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+details.faq-item summary::after {
+  content: "+";
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+details.faq-item[open] summary::after {
+  content: "−";
+}
+
+details.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-answer {
+  padding: 0 var(--space-4) var(--space-4);
+}
+
+.faq-answer p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.faq-cta { margin-top: var(--space-4); }
+
 /* === GRIDS === */
-.benefits-grid, .support-grid, .links-grid, .contact-methods {
+.benefits-grid, .links-grid, .contact-methods {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: var(--space-4);
   margin: var(--space-4) 0;
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  margin: var(--space-4) 0;
+}
+
+.support-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.support-item .btn,
+.support-item .btn-secondary {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .benefit-item, .quick-link {
@@ -731,7 +792,7 @@ article > section > h2 {
 
   .plugin-grid, .benefits-grid, .support-grid, .server-list,
   .info-cards, .support-cards, .links-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .page-nav ul { flex-direction: column; }
