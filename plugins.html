@@ -48,6 +48,8 @@ twitter_description: "Каталог расширений для Lampa."
         <a href="#tv-plugins" class="category-link">📺 IPTV и ТВ</a>
         <a href="#interface-plugins" class="category-link">🎨 Интерфейс</a>
         <a href="#tools-plugins" class="category-link">🛠️ Инструменты</a>
+        <a href="#integration-plugins" class="category-link">🔌 Интеграции</a>
+        <a href="#mediaserver-plugins" class="category-link">🗄️ Медиасерверы</a>
         <a href="#stores-plugins" class="category-link">🏪 Магазины</a>
         <a href="#radio-plugins" class="category-link">📻 Радио</a>
         <a href="#special-plugins" class="category-link">🚀 Специальные</a>
@@ -108,6 +110,8 @@ twitter_description: "Каталог расширений для Lampa."
     {% assign interface_plugins = site.plugins | where: "category", "Интерфейс" %}
     {% assign system_plugins = site.plugins | where: "category", "Система" %}
     {% assign tools_plugins = site.plugins | where: "category", "Инструменты" %}
+    {% assign integration_plugins = site.plugins | where: "category", "Интеграции" %}
+    {% assign mediaserver_plugins = site.plugins | where: "category", "Медиасерверы" %}
     {% assign store_plugins = site.plugins | where: "category", "Магазины" %}
     {% assign radio_plugins = site.plugins | where: "category", "Радио" %}
     {% assign special_plugins = site.plugins | where: "category", "Специальные" %}
@@ -217,6 +221,40 @@ twitter_description: "Каталог расширений для Lampa."
 
 
 
+      </div>
+    </section>
+
+    <!-- Интеграции -->
+    <section id="integration-plugins" class="plugin-category">
+      <h2>🔌 Интеграции</h2>
+      <p>Плагины для подключения внешних источников рейтингов и метаданных: Кинопоиск, TMDB и другие сервисы.</p>
+
+      <div class="plugin-grid">
+        {% for plugin in integration_plugins %}
+        <div class="plugin-card">
+          <h3><a href="{{ plugin.url }}" class="plugin-link">{{ plugin.icon }} {{ plugin.title }}</a></h3>
+          <p>{{ plugin.description }}</p>
+          <code>{{ plugin.url_plugin }}</code>
+          <span class="plugin-status {% if plugin.status == 'Активен' %}active{% else %}warning{% endif %}">{{ plugin.status }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- Медиасерверы -->
+    <section id="mediaserver-plugins" class="plugin-category">
+      <h2>🗄️ Медиасерверы</h2>
+      <p>Плагины для подключения к домашним медиасерверам и сетевым хранилищам (DLNA, NAS).</p>
+
+      <div class="plugin-grid">
+        {% for plugin in mediaserver_plugins %}
+        <div class="plugin-card">
+          <h3><a href="{{ plugin.url }}" class="plugin-link">{{ plugin.icon }} {{ plugin.title }}</a></h3>
+          <p>{{ plugin.description }}</p>
+          <code>{{ plugin.url_plugin }}</code>
+          <span class="plugin-status {% if plugin.status == 'Активен' %}active{% else %}warning{% endif %}">{{ plugin.status }}</span>
+        </div>
+        {% endfor %}
       </div>
     </section>
 
