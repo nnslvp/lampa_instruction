@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://lampa.nnslvp.io/sitemap.xml 
+Disallow: /docs/
+Sitemap: https://lampa.nnslvp.io/sitemap.xml
