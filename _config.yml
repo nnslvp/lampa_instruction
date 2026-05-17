@@ -31,7 +31,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - docs/superpowers/
+  - docs/
 
 # Include files
 include:
@@ -46,6 +46,20 @@ social:
   name: "Lampa Guide"
   links:
     - "https://t.me/lampatv_support"
+
+twitter:
+  card: summary_large_image
+
+# Единый источник OG/Twitter-картинки для jekyll-seo-tag
+defaults:
+  - scope:
+      path: ""
+    values:
+      image:
+        path: /assets/images/og-image.png
+        width: 1200
+        height: 630
+        alt: "Lampa — настройка и плагины для просмотра фильмов"
 
 # Sitemap settings
 sitemap:
