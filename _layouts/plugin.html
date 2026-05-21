@@ -38,6 +38,8 @@ layout: default
 </nav>
 
 <!-- Предупреждение о блокировках -->
+{% assign plugin_slug = page.url | remove: "/plugins/" | remove: "/" %}
+{% assign plugin_source = "lampa_plugin_" | append: plugin_slug %}
 <section class="geo-warning">
   <div class="geo-warning-content">
     <div class="geo-warning-icon">🌍</div>
@@ -46,8 +48,8 @@ layout: default
       <p>
         Этот плагин и источники контента могут быть недоступны на территории Российской Федерации 
         из-за региональных ограничений и блокировок. Для стабильной работы рекомендуем 
-        использовать <a href="https://vpn.nnslvp.io" target="_blank" rel="noopener noreferrer" class="vpn-link-highlighted">VPN-сервис Дымка</a>.
-        Telegram не работает? На сайте есть способ его разблочить.
+        {% include bot_cta.html source=plugin_source label="VPN-сервис Дымка" class="vpn-link-highlighted" %} — 1 ГБ/день бесплатно, без карты.
+        Telegram заблокирован? <a href="{{ site.proxy_link }}" target="_blank" rel="noopener noreferrer" class="vpn-link-highlighted">Добавьте прокси одной кнопкой</a> — заработает мгновенно.
       </p>
       <div class="vpn-features">
         <span class="vpn-feature">✓ Обход блокировок</span>

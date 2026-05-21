@@ -6,6 +6,10 @@ baseurl: ""
 locale: "ru_RU"
 lang: "ru"
 
+# Dymka bot CTA — единый источник для ?start=-меток и MTProxy-фолбэка
+bot_username: "dymka_app_bot"
+proxy_link: "tg://proxy?server=proxy.nnslvp.io&port=2087&secret=ee9294cd43917c945d88db17fa0c0988617777772e636c6f7564666c6172652e636f6d"
+
 
 # Build settings
 markdown: kramdown
