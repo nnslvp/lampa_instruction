@@ -321,9 +321,7 @@ twitter_description: "Полное руководство по обеспече�
     
     <div class="immediate-solution">
       <p><strong>💡 Мгновенное решение:</strong> 
-      <a href="https://vpn.nnslvp.io" target="_blank" rel="noopener noreferrer" class="inline-vpn-link">
-        Подключите Дымку — бесплатно, пока есть места
-      </a> и все заработает</p>
+      {% include bot_cta.html source="lampa_stability_immediate" label="Подключите Дымку — бесплатно, пока есть места" class="inline-vpn-link" %} и все заработает</p>
     </div>
   </div>
 </section>
@@ -371,10 +369,8 @@ twitter_description: "Полное руководство по обеспече�
       
       <div class="emergency-vpn-cta">
         <p><strong>⚡ Самое быстрое решение:</strong></p>
-        <a href="https://vpn.nnslvp.io" target="_blank" rel="noopener noreferrer" class="emergency-button">
-          Подключить Дымку — бесплатно
-        </a>
-        <br><small>Telegram не работает? На сайте есть способ его разблочить</small>
+        {% include bot_cta.html source="lampa_stability_emergency" label="Подключить Дымку — бесплатно" class="emergency-button" %}
+        <br><small>Telegram не работает? <a href="{{ site.proxy_link }}" target="_blank" rel="noopener noreferrer">подключите прокси одной кнопкой</a></small>
       </div>
     </div>
     
@@ -423,7 +419,7 @@ twitter_description: "Полное руководство по обеспече�
       <h3>💰 Сколько стоит стабильная работа?</h3>
       <p>С Дымкой — бесплатно, пока есть места. Подключение занимает 2 минуты через Telegram-бот.</p>
       <p><strong>Попробуйте:</strong>
-      <a href="https://vpn.nnslvp.io" target="_blank" rel="noopener noreferrer">Дымка — бесплатно, пока есть места</a></p>
+      {% include bot_cta.html source="lampa_stability_faq" label="Дымка — бесплатно, пока есть места" %}</p>
     </div>
   </div>
 </section>
@@ -468,10 +464,8 @@ twitter_description: "Полное руководство по обеспече�
             <span class="offer-feature">✅ Умный роутинг — подключил и забыл</span>
             <span class="offer-feature">✅ Бесплатно, пока есть места</span>
           </div>
-          <a href="https://vpn.nnslvp.io" target="_blank" rel="noopener noreferrer" class="cta-button-main">
-            Подключить Дымку →
-          </a>
-          <p style="margin-top:0.5rem;font-size:0.85rem;opacity:0.8;">Telegram заблокирован? На сайте есть способ его разблочить</p>
+          {% include bot_cta.html source="lampa_stability_cta" label="Подключить Дымку →" class="cta-button-main" %}
+          <p style="margin-top:0.5rem;font-size:0.85rem;opacity:0.8;">Telegram заблокирован? <a href="{{ site.proxy_link }}" target="_blank" rel="noopener noreferrer">добавьте прокси одной кнопкой</a></p>
         </div>
       </div>
     </div>

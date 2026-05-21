@@ -49,9 +49,7 @@ twitter_description: "115 рабочих плагинов для Lampa с пош
             <p>Дымка — бесплатный VPN с умным роутингом. Госуслуги и Авито работают без отключения. Telegram разблокирован. Настройка за 30 секунд.</p>
           </div>
           <div class="vpn-cta-button">
-            <a href="https://vpn.nnslvp.io" target="_blank" rel="noopener noreferrer" class="btn-vpn">
-              Подключить бесплатно →
-            </a>
+            {% include bot_cta.html source="lampa_index_hero" label="Подключить бесплатно →" class="btn-vpn" %}
           </div>
         </div>
       </section>
@@ -136,7 +134,7 @@ twitter_description: "115 рабочих плагинов для Lampa с пош
             и защиты вашей приватности мы настоятельно рекомендуем использовать 
             <a href="https://t.me/dymka_app_bot?start=lampa_index_vpn" target="_blank" rel="noopener noreferrer" class="vpn-link">
               VPN-сервис Дымка</a>. Это обеспечит надёжное соединение и защитит ваши данные от отслеживания.
-            <br><small>Telegram не работает? <a href="https://vpn.nnslvp.io" target="_blank" rel="noopener noreferrer">Подключите через сайт vpn.nnslvp.io</a></small>
+            <br><small>Telegram не работает? <a href="{{ site.proxy_link }}" target="_blank" rel="noopener noreferrer">Подключите прокси одной кнопкой</a></small>
           </p>
                 <div class="security-benefits">
         <div class="security-item">
