@@ -1,0 +1,9 @@
+{%- comment -%}
+Единый источник CTA-ссылки в бота Дымки (аналог botLink на dymkavpn-site).
+Параметры:
+  source — метка ?start= (обязателен), напр. lampa_plugin_jackett-integration
+  label  — текст ссылки (по умолчанию "VPN-сервис Дымка")
+  class  — CSS-класс (по умолчанию "vpn-link")
+Имя бота — в _config.yml (site.bot_username). Длина ?start= ≤ 64 (лимит Telegram).
+{%- endcomment -%}
+<a href="https://t.me/{{ site.bot_username }}?start={{ include.source }}" target="_blank" rel="noopener noreferrer" class="{{ include.class | default: 'vpn-link' }}">{{ include.label | default: 'VPN-сервис Дымка' }}</a>
