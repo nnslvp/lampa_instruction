@@ -19,5 +19,5 @@ jobs:
       - name: Build
         run: bundle exec jekyll build
 
-      - name: CTA consistency check (bot links tagged lampa_* and within 64 chars)
+      - name: CTA consistency check (VPN link on every plugin page, no dead links)
         run: ruby scripts/check_cta.rb

@@ -223,7 +223,7 @@ twitter_description: "Полное руководство по обеспече�
           <td><span class="rating excellent">99%</span></td>
           <td><span class="rating excellent">Высокая</span></td>
           <td><span class="rating excellent">Простая</span></td>
-          <td><span class="rating good">59₽/мес</span></td>
+          <td><span class="rating good">Платная подписка</span></td>
           <td><span class="rating excellent">✅ Идеально</span></td>
         </tr>
         <tr>
@@ -321,7 +321,7 @@ twitter_description: "Полное руководство по обеспече�
     
     <div class="immediate-solution">
       <p><strong>💡 Мгновенное решение:</strong> 
-      {% include bot_cta.html source="lampa_stability_immediate" label="Подключите Дымку — бесплатно, пока есть места" class="inline-vpn-link" %} и все заработает</p>
+      {% include vpn_cta.html label="Подключите VPN за 2 минуты" class="inline-vpn-link" %} и все заработает</p>
     </div>
   </div>
 </section>
@@ -369,8 +369,7 @@ twitter_description: "Полное руководство по обеспече�
       
       <div class="emergency-vpn-cta">
         <p><strong>⚡ Самое быстрое решение:</strong></p>
-        {% include bot_cta.html source="lampa_stability_emergency" label="Подключить Дымку — бесплатно" class="emergency-button" %}
-        <br><small>Telegram не работает? <a href="{{ site.proxy_link }}" target="_blank" rel="noopener noreferrer">подключите прокси одной кнопкой</a></small>
+        {% include vpn_cta.html label="Включить VPN сейчас — работает за 60 секунд" class="emergency-button" %}
       </div>
     </div>
     
@@ -392,15 +391,16 @@ twitter_description: "Полное руководство по обеспече�
   
   <div class="faq-blocks">
     <div class="faq-block">
-      <h3>🤔 Чем Дымка лучше обычных VPN?</h3>
-      <p>Дымка использует умный роутинг — сама определяет, какой трафик направить через VPN, а какой нет:</p>
+      <h3>🤔 Почему бесплатные VPN не подходят?</h3>
+      <p>Бесплатные VPN имеют критические недостатки для стриминга:</p>
       <ul>
-        <li>Госуслуги, Авито, Wildberries работают без отключения VPN</li>
-        <li>Не нужно постоянно включать и выключать</li>
-        <li>Подключил и забыл</li>
-        <li>Никаких ограничений скорости и трафика</li>
+        <li>Ограничение скорости (1-5 Мбит/с)</li>
+        <li>Ограничение трафика (500МБ-2ГБ в месяц)</li>
+        <li>Нестабильное соединение</li>
+        <li>Логирование и продажа данных</li>
+        <li>Блокировка P2P трафика</li>
       </ul>
-      <p><strong>Итог:</strong> Дымка — VPN, который не мешает повседневным сервисам.</p>
+      <p><strong>Итог:</strong> для Lampa нужен платный проверенный VPN с высокой скоростью.</p>
     </div>
     
     <div class="faq-block">
@@ -417,9 +417,15 @@ twitter_description: "Полное руководство по обеспече�
     
     <div class="faq-block">
       <h3>💰 Сколько стоит стабильная работа?</h3>
-      <p>С Дымкой — бесплатно, пока есть места. Подключение занимает 2 минуты через Telegram-бот.</p>
+      <p>Сравнение затрат на разные решения:</p>
+      <ul>
+        <li><strong>Качественный VPN:</strong> дешевле любой альтернативы, подписка на месяц</li>
+        <li><strong>Платные прокси:</strong> дороже VPN и работают нестабильно</li>
+        <li><strong>Смена провайдера:</strong> заметная надбавка к тарифу, блокировки остаются</li>
+        <li><strong>Мобильный интернет:</strong> самый дорогой вариант, лимиты по трафику</li>
+      </ul>
       <p><strong>Попробуйте:</strong>
-      {% include bot_cta.html source="lampa_stability_faq" label="Дымка — бесплатно, пока есть места" %}</p>
+      {% include vpn_cta.html label="Подключить BlancVPN" %}</p>
     </div>
   </div>
 </section>
@@ -458,14 +464,14 @@ twitter_description: "Полное руководство по обеспече�
       <div class="cta-offers">
         <div class="cta-main-offer">
           <div class="offer-badge">Рекомендуем</div>
-          <h4>Дымка — VPN для России без боли</h4>
+          <h4>BlancVPN — проверено пользователями Lampa</h4>
           <div class="offer-features">
-            <span class="offer-feature">✅ Госуслуги, Авито, Wildberries работают</span>
-            <span class="offer-feature">✅ Умный роутинг — подключил и забыл</span>
-            <span class="offer-feature">✅ Бесплатно, пока есть места</span>
+            <span class="offer-feature">✅ Работает со всеми источниками</span>
+            <span class="offer-feature">✅ Высокая скорость стриминга</span>
+            <span class="offer-feature">✅ Поддержка 24/7 на русском</span>
+            <span class="offer-feature">✅ Настройка за 2 минуты</span>
           </div>
-          {% include bot_cta.html source="lampa_stability_cta" label="Подключить Дымку →" class="cta-button-main" %}
-          <p style="margin-top:0.5rem;font-size:0.85rem;opacity:0.8;">Telegram заблокирован? <a href="{{ site.proxy_link }}" target="_blank" rel="noopener noreferrer">добавьте прокси одной кнопкой</a></p>
+          {% include vpn_cta.html label="Подключить BlancVPN →" class="cta-button-main" %}
         </div>
       </div>
     </div>
@@ -731,12 +737,17 @@ twitter_description: "Полное руководство по обеспече�
 }
 
 .immediate-solution {
-  background: var(--primary-color);
+  background: var(--accent);
   color: white;
-  padding: var(--spacing-md);
+  padding: var(--space-4);
   border-radius: var(--radius-md);
-  margin-top: var(--spacing-md);
+  margin-top: var(--space-4);
   text-align: center;
+}
+
+.immediate-solution p,
+.immediate-solution strong {
+  color: white;
 }
 
 .inline-vpn-link {
@@ -771,29 +782,34 @@ twitter_description: "Полное руководство по обеспече�
 }
 
 .emergency-vpn-cta {
-  background: var(--error);
+  background: #b91c1c;
   color: white;
-  padding: var(--spacing-lg);
+  padding: var(--space-6);
   border-radius: var(--radius-md);
-  margin-top: var(--spacing-md);
+  margin-top: var(--space-4);
   text-align: center;
+}
+
+.emergency-vpn-cta p,
+.emergency-vpn-cta strong {
+  color: white;
 }
 
 .emergency-button {
   display: inline-block;
-  padding: var(--spacing-md) var(--spacing-xl);
+  padding: var(--space-4) var(--space-8);
   background: white;
-  color: var(--error);
+  color: #b91c1c;
   font-weight: 700;
   border-radius: var(--radius-md);
   text-decoration: none;
-  margin-top: var(--spacing-sm);
-  transition: all var(--transition-fast);
+  margin-top: var(--space-2);
+  transition: all 0.15s ease;
 }
 
 .emergency-button:hover {
   transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .faq-blocks {
@@ -815,20 +831,20 @@ twitter_description: "Полное руководство по обеспече�
 }
 
 .final-cta {
-  margin-top: var(--spacing-2xl);
-  background: var(--background-primary);
+  margin-top: var(--space-12);
+  background: var(--bg-elevated);
   border-radius: var(--radius-lg);
-  padding: var(--spacing-2xl);
+  padding: var(--space-8);
   text-align: center;
 }
 
 .cta-main-offer {
   position: relative;
-  background: var(--surface);
-  border: 2px solid var(--primary-color);
+  background: var(--bg-surface);
+  border: 2px solid var(--accent);
   border-radius: var(--radius-lg);
-  padding: var(--spacing-2xl);
-  margin-top: var(--spacing-lg);
+  padding: var(--space-8);
+  margin-top: var(--space-6);
 }
 
 .offer-badge {
@@ -836,23 +852,23 @@ twitter_description: "Полное руководство по обеспече�
   top: -10px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--primary-color);
+  background: var(--accent);
   color: white;
-  padding: var(--spacing-xs) var(--spacing-lg);
+  padding: var(--space-1) var(--space-6);
   border-radius: var(--radius-sm);
-  font-size: var(--font-size-sm);
+  font-size: 0.875rem;
   font-weight: 600;
 }
 
 .offer-features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--spacing-sm);
-  margin: var(--spacing-lg) 0;
+  gap: var(--space-2);
+  margin: var(--space-6) 0;
 }
 
 .offer-feature {
-  font-size: var(--font-size-sm);
+  font-size: 0.875rem;
   color: var(--text-secondary);
 }
 
@@ -880,23 +896,23 @@ twitter_description: "Полное руководство по обеспече�
 .cta-button-main {
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-lg) var(--spacing-3xl);
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-12);
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
   color: white;
   border: none;
   border-radius: var(--radius-md);
   font-weight: 700;
-  font-size: var(--font-size-xl);
+  font-size: 1.25rem;
   text-decoration: none;
-  transition: all var(--transition-normal);
-  box-shadow: var(--shadow-xl);
-  margin: var(--spacing-lg) 0;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 24px rgba(180, 83, 9, 0.25);
+  margin: var(--space-6) 0;
 }
 
 .cta-button-main:hover {
   transform: translateY(-3px);
-  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 20px 40px rgba(180, 83, 9, 0.3);
   color: white;
 }
 

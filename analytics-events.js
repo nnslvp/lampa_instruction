@@ -16,10 +16,8 @@
 
     var href = link.getAttribute('href') || '';
 
-    if (href.indexOf('t.me/dymka_app_bot') !== -1) {
-      reachGoal('dymka_bot_open');
-    } else if (href.indexOf('tg://proxy') === 0) {
-      reachGoal('dymka_proxy_connect');
+    if (href.indexOf('getblancvpn.deals') !== -1) {
+      reachGoal('blancvpn_click');
     } else if (href.indexOf('t.me/+0iNJ8wLZretiOThi') !== -1) {
       reachGoal('lampa_chat_open');
     }

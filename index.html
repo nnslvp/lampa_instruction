@@ -43,13 +43,13 @@ twitter_description: "115 рабочих плагинов для Lampa с пош
       <!-- VPN CTA Block -->
       <section class="vpn-cta">
         <div class="vpn-cta-content">
-          <div class="vpn-cta-icon">🌫</div>
+          <div class="vpn-cta-icon">🛡️</div>
           <div class="vpn-cta-text">
             <h3>Нужен VPN для стабильной работы?</h3>
-            <p>Дымка — бесплатный VPN с умным роутингом. Госуслуги и Авито работают без отключения. Telegram разблокирован. Настройка за 30 секунд.</p>
+            <p>BlancVPN — обход блокировок всех источников, высокая скорость для стриминга без буферизации, поддержка на русском. Настройка за 2 минуты.</p>
           </div>
           <div class="vpn-cta-button">
-            {% include bot_cta.html source="lampa_index_hero" label="Подключить бесплатно →" class="btn-vpn" %}
+            {% include vpn_cta.html label="Подключить VPN →" class="btn-vpn" %}
           </div>
         </div>
       </section>
@@ -74,13 +74,11 @@ twitter_description: "115 рабочих плагинов для Lampa с пош
         <div class="proxy-cta-content">
           <div class="proxy-cta-icon">🔓</div>
           <div class="proxy-cta-text">
-            <h3>Telegram заблокирован?</h3>
-            <p>Подключите бесплатный прокси — доступ к Telegram без VPN за 1 клик</p>
+            <h3>Источники не открываются?</h3>
+            <p>Провайдер режет доступ к балансерам и торрент-трекерам — VPN снимает ограничение сразу, без настройки роутера</p>
           </div>
           <div class="proxy-cta-button">
-            <a href="tg://proxy?server=proxy.dymka.app&port=2087&secret=ee9294cd43917c945d88db17fa0c0988617777772e636c6f7564666c6172652e636f6d" target="_blank" rel="noopener noreferrer" class="btn-proxy">
-              ⚡ Подключить прокси
-            </a>
+            {% include vpn_cta.html label="⚡ Снять ограничения" class="btn-proxy" %}
           </div>
         </div>
       </section>
@@ -132,9 +130,7 @@ twitter_description: "115 рабочих плагинов для Lampa с пош
             В последнее время многие интернет-сервисы и источники контента активно ограничиваются 
             провайдерами и государственными органами. Для стабильного доступа к медиаконтенту 
             и защиты вашей приватности мы настоятельно рекомендуем использовать 
-            <a href="https://t.me/dymka_app_bot?start=lampa_index_vpn" target="_blank" rel="noopener noreferrer" class="vpn-link">
-              VPN-сервис Дымка</a>. Это обеспечит надёжное соединение и защитит ваши данные от отслеживания.
-            <br><small>Telegram не работает? <a href="{{ site.proxy_link }}" target="_blank" rel="noopener noreferrer">Подключите прокси одной кнопкой</a></small>
+            {% include vpn_cta.html label="проверенный VPN-сервис" %}. Это обеспечит надёжное соединение и защитит ваши данные от отслеживания.
           </p>
                 <div class="security-benefits">
         <div class="security-item">
