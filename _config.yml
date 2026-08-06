@@ -6,9 +6,8 @@ baseurl: ""
 locale: "ru_RU"
 lang: "ru"
 
-# Dymka bot CTA — единый источник для ?start=-меток и MTProxy-фолбэка
-bot_username: "dymka_app_bot"
-proxy_link: "tg://proxy?server=proxy.dymka.app&port=2087&secret=ee9294cd43917c945d88db17fa0c0988617777772e636c6f7564666c6172652e636f6d"
+# Партнёрская ссылка BlancVPN — единый источник для всех VPN-CTA
+vpn_link: "https://getblancvpn.deals/?ref=yahor"
 
 
 # Build settings
@@ -36,6 +35,7 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - docs/
+  - scripts/
 
 # Include files
 include:

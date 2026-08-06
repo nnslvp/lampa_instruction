@@ -1,39 +1,31 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-# Гард консистентности бот-CTA (статический аналог cta.spec.ts с dymkavpn-site).
-# Сканирует собранный сайт и проверяет:
-#   1. каждая ссылка в бота размечена ?start=lampa_<...> правильного формата;
-#   2. payload ?start= не длиннее 64 символов (лимит Telegram — иначе обрежется);
-#   3. на каждой странице плагина есть хотя бы одна ссылка в бота.
+# Гард консистентности VPN-CTA. Сканирует собранный сайт и проверяет:
+#   1. на каждой странице плагина есть ссылка на партнёрку BlancVPN;
+#   2. в сборке не осталось следов отключённого сервиса «Дымка».
 # Запуск: bundle exec jekyll build && ruby scripts/check_cta.rb
 
 SITE = File.expand_path("../_site", __dir__)
-LINK_RE = %r{https://t\.me/dymka_app_bot\?start=[^"'\s]+}
-MARKER_RE = %r{\Ahttps://t\.me/dymka_app_bot\?start=lampa_[a-z0-9_-]+\z}
-START_LIMIT = 64
+LINK_RE = %r{https://getblancvpn\.deals/\?ref=yahor}
+DEAD_RE = %r{dymka|t\.me/dymka_app_bot|proxy\.dymka\.app}i
 
 abort "No _site/ — run `bundle exec jekyll build` first" unless Dir.exist?(SITE)
 
 errors = []
 pages = Dir.glob(File.join(SITE, "**", "*.html"))
 
+# Мёртвые ссылки на «Дымку» не должны попадать в сборку ни на одной странице.
 pages.each do |file|
   rel = file.delete_prefix("#{SITE}/")
-  File.read(file, encoding: "UTF-8").scan(LINK_RE).each do |href|
-    errors << "#{rel}: bad marker format → #{href}" unless href.match?(MARKER_RE)
-    payload = href.split("?start=", 2).last
-    if payload.length > START_LIMIT
-      errors << "#{rel}: ?start= payload is #{payload.length}>#{START_LIMIT} chars → #{payload}"
-    end
-  end
+  errors << "#{rel}: dead Dymka reference" if File.read(file, encoding: "UTF-8").match?(DEAD_RE)
 end
 
-# Каждая страница плагина обязана вести в бота (каталог /plugins/ — не деталь).
+# Каждая страница плагина обязана вести на VPN (каталог /plugins/ — не деталь).
 Dir.glob(File.join(SITE, "plugins", "*.html")).each do |file|
   rel = file.delete_prefix("#{SITE}/")
   next if rel == "plugins/index.html"
-  errors << "#{rel}: no bot CTA on plugin page" unless File.read(file, encoding: "UTF-8").match?(LINK_RE)
+  errors << "#{rel}: no VPN CTA on plugin page" unless File.read(file, encoding: "UTF-8").match?(LINK_RE)
 end
 
 if errors.empty?

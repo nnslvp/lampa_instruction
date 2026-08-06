@@ -38,8 +38,6 @@ layout: default
 </nav>
 
 <!-- Предупреждение о блокировках -->
-{% assign plugin_slug = page.url | remove: "/plugins/" | remove: "/" %}
-{% assign plugin_source = "lampa_plugin_" | append: plugin_slug %}
 <section class="geo-warning">
   <div class="geo-warning-content">
     <div class="geo-warning-icon">🌍</div>
@@ -48,13 +46,13 @@ layout: default
       <p>
         Этот плагин и источники контента могут быть недоступны на территории Российской Федерации 
         из-за региональных ограничений и блокировок. Для стабильной работы рекомендуем 
-        {% include bot_cta.html source=plugin_source label="VPN-сервис Дымка" class="vpn-link-highlighted" %} — 1 ГБ/день бесплатно, без карты.
-        Telegram заблокирован? <a href="{{ site.proxy_link }}" target="_blank" rel="noopener noreferrer" class="vpn-link-highlighted">Добавьте прокси одной кнопкой</a> — заработает мгновенно.
+        использовать {% include vpn_cta.html label="надёжный VPN-сервис" class="vpn-link-highlighted" %} — настройка занимает пару минут,
+        и плагин заработает сразу.
       </p>
       <div class="vpn-features">
         <span class="vpn-feature">✓ Обход блокировок</span>
-        <span class="vpn-feature">✓ Госуслуги и Авито работают</span>
-        <span class="vpn-feature">✓ Бесплатно</span>
+        <span class="vpn-feature">✓ Быстрое подключение</span>
+        <span class="vpn-feature">✓ Безопасность</span>
       </div>
     </div>
   </div>

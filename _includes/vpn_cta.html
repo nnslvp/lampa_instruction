@@ -1,0 +1,8 @@
+{%- comment -%}
+Единый источник CTA-ссылки на VPN (партнёрская ссылка BlancVPN).
+Параметры:
+  label  — текст ссылки (по умолчанию "проверенный VPN-сервис")
+  class  — CSS-класс (по умолчанию "vpn-link")
+Сама ссылка — в _config.yml (site.vpn_link).
+{%- endcomment -%}
+<a href="{{ site.vpn_link }}" target="_blank" rel="noopener noreferrer" class="{{ include.class | default: 'vpn-link' }}">{{ include.label | default: 'проверенный VPN-сервис' }}</a>
