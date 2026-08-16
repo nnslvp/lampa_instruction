@@ -11,5 +11,5 @@
   <strong>{{ include.title }}</strong>
   <p>{{ include.body }}</p>
   <p>{% include vpn_cta.html label=include.cta_label class="vpn-link-highlighted" pos=block_pos %}</p>
-  <span class="vpn-note-more">Разбор всех способов обхода — на странице <a href="/stability">«Обход блокировок»</a>.</span>
+  {% unless page.url == '/stability' %}<span class="vpn-note-more">Разбор всех способов обхода — на странице <a href="/stability">«Обход блокировок»</a>.</span>{% endunless %}
 </div>
