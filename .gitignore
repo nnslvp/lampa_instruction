@@ -36,3 +36,4 @@ Thumbs.db
 docs/superpowers/
 seo-workspace/
 .playwright-mcp/
+.claude/launch.json

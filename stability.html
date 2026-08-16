@@ -1,18 +1,18 @@
 ---
 layout: default
-title: "Стабильная работа Lampa - Обход блокировок"
-description: "Как обеспечить стабильную работу Lampa, обойти блокировки провайдеров и Роскомнадзора. Методы защиты от ограничений доступа."
-keywords: "Lampa, блокировки, обход, VPN, DNS, стабильная работа, Роскомнадзор"
-og_title: "Стабильная работа Lampa - Обход блокировок"
-og_description: "Полное руководство по обеспечению стабильной работы Lampa и обходу блокировок"
-twitter_title: "Стабильная работа Lampa - Обход блокировок"
-twitter_description: "Полное руководство по обеспечению стабильной работы Lampa и обходу блокировок"
+title: "Lampa перестала работать: обход блокировок в 2026 (VPN, DNS, прокси)"
+description: "Lampa не работает или не грузит источники? Пошаговый обход блокировок провайдера в 2026: VPN, DNS, зеркала и смена сервера — от бесплатных способов к надёжным."
+keywords: "lampa не работает, lampa перестала работать, обход блокировок lampa, lampa vpn, lampa dns, блокировка источников lampa"
+og_title: "Lampa перестала работать: обход блокировок в 2026"
+og_description: "Пошаговый обход блокировок для Lampa: VPN, DNS, зеркала и смена сервера — от бесплатных способов к надёжным."
+twitter_title: "Lampa перестала работать: обход блокировок в 2026"
+twitter_description: "Пошаговый обход блокировок для Lampa: VPN, DNS, зеркала и смена сервера — от бесплатных способов к надёжным."
 ---
 
 <!-- Hero Section -->
 <section class="hero-section">
   <div class="hero-content">
-    <h2>🛡️ Стабильная работа Lampa в условиях блокировок</h2>
+    <h2>🛡️ Lampa перестала работать? Обход блокировок в 2026</h2>
     <p class="hero-description">
       Полное руководство по обеспечению бесперебойного доступа к контенту, 
       обходу ограничений провайдеров и защите от блокировок Роскомнадзора.
@@ -33,6 +33,12 @@ twitter_description: "Полное руководство по обеспече�
     </div>
   </div>
 </section>
+
+{% include vpn_block.html
+   title="Провайдер заблокировал источники?"
+   body="Чаще всего Lampa «ломается» не сама: провайдер блокирует трекеры и балансеры и режет P2P-скорость через DPI. Проверка за минуту: включите VPN и обновите список источников — если контент появился, причина найдена."
+   cta_label="Проверить через VPN (60 секунд) →"
+   pos="top" %}
 
 <!-- Актуальная ситуация -->
 <section class="content-card">
@@ -318,11 +324,10 @@ twitter_description: "Полное руководство по обеспече�
       <li>Попытайтесь загрузить плагины в Lampa</li>
       <li>Если ничего не работает - вы заблокированы</li>
     </ol>
-    
-    <div class="immediate-solution">
-      <p><strong>💡 Мгновенное решение:</strong> 
-      {% include vpn_cta.html label="Подключите VPN за 2 минуты" class="inline-vpn-link" %} и все заработает</p>
-    </div>
+
+    <p>Если Lampa открывается, но не находит источники по конкретным фильмам —
+    это отдельный класс проблем: смотрите разбор
+    <a href="/problems/no-sources">«Lampa не находит источники: 5 причин и решение»</a>.</p>
   </div>
 </section>
 
@@ -366,11 +371,6 @@ twitter_description: "Полное руководство по обеспече�
         <li>Попробуйте альтернативные адреса: <code>cf.lampa.mx</code>, <code>bylampa.online</code></li>
         <li>Установите Media Station X с параметром <code>lampa.mx</code></li>
       </ol>
-      
-      <div class="emergency-vpn-cta">
-        <p><strong>⚡ Самое быстрое решение:</strong></p>
-        {% include vpn_cta.html label="Включить VPN сейчас — работает за 60 секунд" class="emergency-button" %}
-      </div>
     </div>
     
     <div class="emergency-card priority-medium">
@@ -424,8 +424,6 @@ twitter_description: "Полное руководство по обеспече�
         <li><strong>Смена провайдера:</strong> заметная надбавка к тарифу, блокировки остаются</li>
         <li><strong>Мобильный интернет:</strong> самый дорогой вариант, лимиты по трафику</li>
       </ul>
-      <p><strong>Попробуйте:</strong>
-      {% include vpn_cta.html label="Подключить BlancVPN" %}</p>
     </div>
   </div>
 </section>
@@ -471,7 +469,7 @@ twitter_description: "Полное руководство по обеспече�
             <span class="offer-feature">✅ Поддержка 24/7 на русском</span>
             <span class="offer-feature">✅ Настройка за 2 минуты</span>
           </div>
-          {% include vpn_cta.html label="Подключить BlancVPN →" class="cta-button-main" %}
+          {% include vpn_cta.html label="Подключить BlancVPN →" class="cta-button-main" pos="bottom" %}
         </div>
       </div>
     </div>

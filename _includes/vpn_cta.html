@@ -1,8 +1,14 @@
 {%- comment -%}
-Единый источник CTA-ссылки на VPN (партнёрская ссылка BlancVPN).
+Единый CTA-компонент партнёрской ссылки BlancVPN.
 Параметры:
-  label  — текст ссылки (по умолчанию "проверенный VPN-сервис")
-  class  — CSS-класс (по умолчанию "vpn-link")
-Сама ссылка — в _config.yml (site.vpn_link).
+  label — текст ссылки (по умолчанию "проверенный VPN-сервис")
+  class — CSS-класс (по умолчанию "vpn-link")
+  pos   — позиция блока на странице: top | mid | bottom | inline (по умолчанию inline)
+База ссылки — site.vpn_link, шаблон sub-параметров — site.vpn_sub_template (_config.yml).
+data-vpn-page/data-vpn-pos читает analytics-events.js для параметров цели Метрики.
 {%- endcomment -%}
-<a href="{{ site.vpn_link }}" target="_blank" rel="noopener noreferrer" class="{{ include.class | default: 'vpn-link' }}">{{ include.label | default: 'проверенный VPN-сервис' }}</a>
+{%- assign vpn_slug = page.url | replace: '.html', '' | remove_first: '/' | replace: '/', '-' -%}
+{%- if vpn_slug == '' -%}{%- assign vpn_slug = 'home' -%}{%- endif -%}
+{%- assign vpn_pos = include.pos | default: 'inline' -%}
+{%- assign vpn_subs = site.vpn_sub_template | replace: 'PAGE', vpn_slug | replace: 'POS', vpn_pos -%}
+<a href="{{ site.vpn_link }}{{ vpn_subs }}" target="_blank" rel="nofollow sponsored noopener" class="{{ include.class | default: 'vpn-link' }}" data-vpn-page="{{ vpn_slug }}" data-vpn-pos="{{ vpn_pos }}">{{ include.label | default: 'проверенный VPN-сервис' }}</a>

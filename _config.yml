@@ -8,6 +8,10 @@ lang: "ru"
 
 # Партнёрская ссылка BlancVPN — единый источник для всех VPN-CTA
 vpn_link: "https://getblancvpn.deals/?ref=yahor"
+# Шаблон sub-параметров партнёрской ссылки (PAGE/POS подставляются в _includes/vpn_cta.html)
+vpn_sub_template: "&sub1=PAGE&sub2=POS"
+# Месяц (предложный падеж) для страниц с датой в заголовке: /torrserver-public, /working-plugins
+content_month: "августе"
 
 
 # Build settings

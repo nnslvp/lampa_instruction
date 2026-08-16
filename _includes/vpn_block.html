@@ -1,0 +1,15 @@
+{%- comment -%}
+Контекстный VPN-блок для страниц решений.
+Параметры:
+  title     — заголовок блока
+  body      — абзац с описанием боли/теста
+  cta_label — текст CTA-ссылки
+  pos       — позиция для атрибуции (по умолчанию mid)
+{%- endcomment -%}
+{%- assign block_pos = include.pos | default: 'mid' -%}
+<div class="vpn-note">
+  <strong>{{ include.title }}</strong>
+  <p>{{ include.body }}</p>
+  <p>{% include vpn_cta.html label=include.cta_label class="vpn-link-highlighted" pos=block_pos %}</p>
+  {% unless page.url == '/stability' %}<span class="vpn-note-more">Разбор всех способов обхода — на странице <a href="/stability">«Обход блокировок»</a>.</span>{% endunless %}
+</div>
