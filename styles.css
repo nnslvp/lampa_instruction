@@ -799,3 +799,19 @@ article > section > h2 {
 
   main.container { padding-top: var(--space-8); padding-bottom: var(--space-8); }
 }
+
+/* === VPN NOTE (контекстный блок решений) === */
+.vpn-note {
+  background: var(--accent-light);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-6);
+  margin: var(--space-6) 0;
+}
+.vpn-note strong { display: block; margin-bottom: var(--space-2); font-family: var(--font-heading); }
+.vpn-note p { margin-bottom: var(--space-2); }
+.vpn-note-more { display: block; font-size: 0.875rem; color: var(--text-muted); }
+
+/* === AFFILIATE NOTE (дисклеймер в футере) === */
+.affiliate-note { font-size: 0.8rem; color: var(--text-muted); margin-top: var(--space-2); }
