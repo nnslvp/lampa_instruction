@@ -1,0 +1,160 @@
+---
+layout: default
+title: "VPN для Lampa на телевизоре: LG, Samsung, Android TV — рабочая схема 2026"
+description: "Как включить VPN для Lampa на телевизоре: нативные приложения для Android TV, обход ограничений LG webOS и Samsung Tizen через роутер. Пошаговые схемы 2026 года."
+keywords: "vpn для lampa, vpn на телевизоре, vpn для смарт тв, просмотр торрентов на lg webos, vpn lg webos, vpn samsung tizen, vpn android tv"
+---
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>VPN для Lampa на телевизоре: LG, Samsung, Android TV — рабочая схема 2026</h1>
+    <p class="hero-description">
+      Половина проблем Lampa — «нет источников», «не грузятся торренты», «пропали балансеры» —
+      решается VPN. Но телевизор — не телефон: на LG и Samsung VPN-приложение поставить нельзя.
+      Разбираем рабочие схемы для каждой платформы.
+    </p>
+  </div>
+</section>
+
+<nav class="page-nav">
+  <h3>Содержание:</h3>
+  <ul>
+    <li><a href="#why">Зачем Lampa VPN</a></li>
+    <li><a href="#android-tv">Android TV — проще всего</a></li>
+    <li><a href="#lg-samsung">LG webOS и Samsung Tizen</a></li>
+    <li><a href="#router">VPN на роутере — для всех устройств</a></li>
+    <li><a href="#faq">Частые вопросы</a></li>
+  </ul>
+</nav>
+
+<section id="why" class="content-card">
+  <h2>🎯 Зачем Lampa нужен VPN на телевизоре</h2>
+  <ul>
+    <li><strong>Заблокированные источники и балансеры</strong> — провайдер закрывает доступ, плагины «не видят» контент</li>
+    <li><strong>Резаная P2P-скорость</strong> — DPI-оборудование распознаёт торрент-трафик и душит его; в VPN-туннеле трафик не распознаётся</li>
+    <li><strong>Недоступные трекеры</strong> — «просмотр торрентов на LG webOS» упирается в блокировку трекеров, а не в телевизор</li>
+    <li><strong>Стабильность серверов Lampa</strong> — зеркала тоже периодически попадают под блокировки</li>
+  </ul>
+  <p>Сначала проверьте бесплатное: смена DNS (1.1.1.1 / 8.8.8.8) и зеркала серверов —
+  инструкция на странице <a href="/stability">«Обход блокировок»</a>. Если не помогло —
+  дальше по схемам ниже.</p>
+</section>
+
+<section id="android-tv" class="content-card">
+  <h2>🤖 Android TV: нативное приложение — 5 минут</h2>
+  <div class="steps-container">
+    <article class="step-card">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h3>Установите VPN-приложение из Play Market</h3>
+        <p>На Android TV VPN ставится как обычное приложение — выбирайте сервис
+        с приложением под TV и оплатой российскими картами.</p>
+      </div>
+    </article>
+    <article class="step-card">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h3>Подключитесь и перезапустите Lampa</h3>
+        <p>Включите VPN, откройте Lampa и обновите список источников — заблокированные
+        балансеры и трекеры появятся снова.</p>
+      </div>
+    </article>
+  </div>
+
+  {% include vpn_block.html
+     title="Нужен VPN с приложением для Android TV?"
+     body="BlancVPN ставится на Android TV из магазина приложений, принимает российские карты и не режет скорость стриминга — хватает на 4K."
+     cta_label="Настроить VPN на Android TV →"
+     pos="mid" %}
+</section>
+
+<section id="lg-samsung" class="content-card">
+  <h2>📺 LG webOS и Samsung Tizen: приложения нет — есть два пути</h2>
+  <p>В магазинах LG и Samsung нет VPN-приложений с полноценным туннелем — платформа
+  не даёт такой возможности. Рабочие варианты:</p>
+
+  <div class="benefits-grid">
+    <div class="benefit-item">
+      <h4>🛜 Путь 1: VPN на роутере (рекомендуем)</h4>
+      <p>Телевизор ничего не знает про VPN — весь его трафик уходит через туннель роутера.
+      Работает с любым ТВ, настраивается один раз. Схема ниже.</p>
+    </div>
+    <div class="benefit-item">
+      <h4>🌐 Путь 2: Смена DNS на телевизоре</h4>
+      <p>Бесплатно и без оборудования: Настройки сети → DNS вручную → 1.1.1.1.
+      Помогает против части блокировок, но бессильна против блокировки по IP и DPI.</p>
+    </div>
+  </div>
+
+  <p>Про просмотр торрентов на этих платформах есть отдельная карточка —
+  <a href="/plugins/webos-tizen-torrents">«Торренты на webOS/Tizen»</a>: TorrServer
+  запускается на соседнем устройстве, а телевизор только играет поток.</p>
+</section>
+
+<section id="router" class="content-card">
+  <h2>🛜 VPN на роутере: одна настройка — все устройства</h2>
+  <ol>
+    <li>Проверьте, что роутер поддерживает VPN-клиент (WireGuard или OpenVPN): Keenetic, MikroTik, ASUS, TP-Link с новыми прошивками — поддерживают</li>
+    <li>В личном кабинете VPN-сервиса скачайте конфигурацию WireGuard (.conf)</li>
+    <li>В админке роутера: раздел VPN-клиент → импортируйте конфигурацию → включите туннель</li>
+    <li>Выберите, какие устройства пускать через VPN (лучше только телевизор — остальным туннель не нужен)</li>
+    <li>Перезапустите Lampa на ТВ и обновите источники</li>
+  </ol>
+  <div class="warning-notice">
+    <p><strong>⚠️ Важно:</strong> сервис должен отдавать конфигурацию WireGuard/OpenVPN для
+    роутеров — у BlancVPN она есть в личном кабинете. Скорости туннеля на средних роутерах
+    хватает на Full HD/4K при WireGuard.</p>
+  </div>
+</section>
+
+<section id="faq" class="content-card">
+  <h2>❓ Частые вопросы</h2>
+
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary>Можно ли поставить VPN прямо на телевизор LG или Samsung?</summary>
+      <div class="faq-answer"><p>Нет: webOS и Tizen не поддерживают VPN-приложения с полноценным туннелем. Рабочая схема — VPN на роутере (телевизор ходит через туннель роутера) или смена DNS как частичная мера.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Как смотреть торренты на LG webOS через Lampa?</summary>
+      <div class="faq-answer"><p>TorrServer запускается на другом устройстве в той же сети (телефон, приставка, ПК), его адрес указывается в Lampa, а блокировку трекеров решает VPN на роутере. Подробная схема — в карточке «Торренты на webOS/Tizen».</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Поможет ли смена DNS вместо VPN?</summary>
+      <div class="faq-answer"><p>Частично: DNS обходит блокировки по доменному имени, но бессилен против блокировок по IP и DPI-фильтрации P2P-трафика. Если после смены DNS источники не появились — нужен VPN.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Не упадёт ли скорость стриминга через VPN?</summary>
+      <div class="faq-answer"><p>На современных протоколах (WireGuard) потери минимальны — хватает на 4K. Более того, если провайдер режет P2P через DPI, скорость торрентов через VPN наоборот вырастает.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Какой VPN выбрать для телевизора в России?</summary>
+      <div class="faq-answer"><p>Критерии: приложение для Android TV, конфигурации WireGuard для роутера, оплата российскими картами и достаточная скорость под стриминг. Проверяйте все четыре пункта до оплаты.</p></div>
+    </details>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Можно ли поставить VPN прямо на телевизор LG или Samsung?", "acceptedAnswer": {"@type": "Answer", "text": "Нет: webOS и Tizen не поддерживают VPN-приложения с полноценным туннелем. Рабочая схема — VPN на роутере или смена DNS как частичная мера."}},
+    {"@type": "Question", "name": "Как смотреть торренты на LG webOS через Lampa?", "acceptedAnswer": {"@type": "Answer", "text": "TorrServer запускается на другом устройстве в той же сети, его адрес указывается в Lampa, а блокировку трекеров решает VPN на роутере."}},
+    {"@type": "Question", "name": "Поможет ли смена DNS вместо VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Частично: DNS обходит блокировки по доменному имени, но бессилен против блокировок по IP и DPI-фильтрации P2P-трафика."}},
+    {"@type": "Question", "name": "Не упадёт ли скорость стриминга через VPN?", "acceptedAnswer": {"@type": "Answer", "text": "На WireGuard потери минимальны — хватает на 4K. Если провайдер режет P2P через DPI, скорость торрентов через VPN наоборот вырастает."}},
+    {"@type": "Question", "name": "Какой VPN выбрать для телевизора в России?", "acceptedAnswer": {"@type": "Answer", "text": "Критерии: приложение для Android TV, конфигурации WireGuard для роутера, оплата российскими картами и достаточная скорость под стриминг."}}
+  ]
+}
+</script>
+
+<section class="content-card">
+  <h2>🔗 По теме</h2>
+  <div class="links-grid">
+    <a href="/plugins/webos-tizen-torrents" class="quick-link"><span class="link-icon">📺</span><span>Торренты на LG webOS и Samsung Tizen</span></a>
+    <a href="/stability" class="quick-link"><span class="link-icon">🛡️</span><span>Обход блокировок: все способы</span></a>
+    <a href="/torrserver-public" class="quick-link"><span class="link-icon">🌐</span><span>Публичные TorrServer для Lampa</span></a>
+    <a href="/guides" class="quick-link"><span class="link-icon">📚</span><span>Настройка Lampa по платформам</span></a>
+  </div>
+</section>
