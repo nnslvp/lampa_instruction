@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Руководства"
-description: "Инструкции по настройке Lampa для разных устройств."
-keywords: "Lampa, руководство, инструкция, настройка, расширенные возможности"
-og_title: "Руководства"
-og_description: "Инструкции по настройке Lampa."
-twitter_title: "Руководства"
-twitter_description: "Инструкции по настройке Lampa."
+title: "Настройка Lampa на телевизоре и Android TV — руководства (2026)"
+description: "Как настроить Lampa на телевизоре LG webOS, Samsung Tizen и Android TV: установка с нуля, параметры, TorrServer, плагины. Пошаговые руководства 2026 года."
+keywords: "настройка lampa, lampa настройка 2026, как настроить lampa на телевизоре, настройка lampa на андроид тв, lampa lg webos, lampa samsung tizen, media station x lampa настройка"
+og_title: "Настройка Lampa на телевизоре и Android TV — руководства (2026)"
+og_description: "Пошаговая настройка Lampa на LG, Samsung и Android TV: установка, параметры, TorrServer, плагины."
+twitter_title: "Настройка Lampa на телевизоре и Android TV — руководства (2026)"
+twitter_description: "Пошаговая настройка Lampa на LG, Samsung и Android TV: установка, параметры, TorrServer, плагины."
 ---
       <!-- Hero Section -->
       <section class="hero-section">
@@ -143,6 +143,19 @@ twitter_description: "Инструкции по настройке Lampa."
         <h2>Настройки для конкретных платформ</h2>
 
         <article class="guide-item">
+          <h3>Android TV: установка с нуля</h3>
+          <p>Как поставить Lampa на телевизор или приставку с Android TV:</p>
+          <ol>
+            <li>Скачайте APK из <a href="https://github.com/lampa-app/LAMPA/releases" target="_blank" rel="noopener noreferrer">официального репозитория</a> (версия с пометкой «TV») или найдите Lampa в Play Market</li>
+            <li>Разрешите установку из неизвестных источников, если ставите APK вручную</li>
+            <li>Запустите приложение и установите <a href="/plugins/tmdb-proxy">TMDB Proxy</a> для постеров</li>
+            <li>Добавьте плагин онлайн-просмотра из <a href="/plugins">каталога</a> — и можно смотреть</li>
+          </ol>
+          <p>Для просмотра торрентов дополнительно настройте TorrServer — см. раздел выше
+          и разбор <a href="/torrserver-public">публичных TorrServer</a>.</p>
+        </article>
+
+        <article class="guide-item">
           <h3>Android TV оптимизация</h3>
           <p>
             Специфические настройки для телевизоров и приставок на Android TV:
@@ -159,6 +172,20 @@ twitter_description: "Инструкции по настройке Lampa."
         </article>
 
         <article class="guide-item">
+          <h3>LG webOS: установка с нуля</h3>
+          <p>На телевизорах LG самый надёжный путь — через Media Station X:</p>
+          <ol>
+            <li>Установите <strong>Media Station X</strong> из LG Content Store</li>
+            <li>Откройте Settings → Start Parameter и введите адрес: <code>lampa.mx</code></li>
+            <li>Перезапустите приложение — откроется интерфейс Lampa</li>
+            <li>Дальше настройка одинакова для всех платформ: TMDB Proxy → плагины из <a href="/plugins">каталога</a></li>
+          </ol>
+          <p>Про просмотр торрентов на LG — отдельная карточка
+          <a href="/plugins/webos-tizen-torrents">«Торренты на webOS/Tizen»</a>
+          и разбор <a href="/vpn-smart-tv">VPN для Lampa на телевизоре</a>.</p>
+        </article>
+
+        <article class="guide-item">
           <h3>LG webOS особенности</h3>
           <p>Рекомендации для пользователей телевизоров LG с webOS:</p>
           <ul>
@@ -171,6 +198,17 @@ twitter_description: "Инструкции по настройке Lampa."
               Используйте магазин приложений LG для установки официальной версии
             </li>
           </ul>
+        </article>
+
+        <article class="guide-item">
+          <h3>Samsung Tizen: установка с нуля</h3>
+          <p>На Samsung, как и на LG, проще всего через Media Station X:</p>
+          <ol>
+            <li>Установите <strong>Media Station X</strong> из магазина приложений Samsung</li>
+            <li>В Settings → Start Parameter укажите: <code>lampa.mx</code></li>
+            <li>Перезапустите приложение — загрузится Lampa</li>
+            <li>Установите TMDB Proxy и плагины просмотра из <a href="/plugins">каталога</a></li>
+          </ol>
         </article>
 
         <article class="guide-item">
@@ -482,5 +520,50 @@ twitter_description: "Инструкции по настройке Lampa."
             <li>Отключите телеметрию и аналитику в настройках</li>
           </ul>
         </article>
+      </section>
+
+      <section id="guides-faq" class="content-card" itemscope itemtype="https://schema.org/FAQPage">
+        <h2>Частые вопросы о настройке Lampa</h2>
+
+        <div class="faq-list">
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">Как настроить Lampa на телевизоре LG?</summary>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Установите Media Station X из LG Content Store, в Settings → Start Parameter укажите адрес lampa.mx и перезапустите приложение. Откроется Lampa — дальше установите TMDB Proxy и плагины просмотра из каталога.</p>
+            </div>
+          </details>
+
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">Как настроить Lampa на Samsung Smart TV?</summary>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Схема та же, что и на LG: Media Station X из магазина Samsung → Start Parameter: lampa.mx → перезапуск. Если HEVC-видео тормозит, отключите аппаратное декодирование в настройках плеера.</p>
+            </div>
+          </details>
+
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">Какой адрес указывать в Media Station X для Lampa?</summary>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Основной адрес — lampa.mx. Если он недоступен, используйте зеркала cf.lampa.mx или bylampa.online. Адрес вводится в Settings → Start Parameter, после чего приложение нужно перезапустить.</p>
+            </div>
+          </details>
+
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">Что делать, если после настройки Lampa не находит источники?</summary>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Сначала проверьте, установлен ли плагин онлайн-просмотра (Online Mod, Showy). Если плагин есть, а источников нет — вероятна блокировка провайдером: разбор причин в статье «Lampa не находит источники», способы обхода — на странице «Обход блокировок».</p>
+            </div>
+          </details>
+
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">Как настроить просмотр торрентов в Lampa?</summary>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Нужен TorrServer: свой (на устройстве или домашнем сервере) или публичный. Настройка — в разделе «Настройка торрент-клиента TorrServe» выше; про бесплатные публичные серверы и их ограничения — отдельный разбор «Публичные TorrServer для Lampa».</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="text-center faq-cta">
+          <a href="/problems/no-sources" class="btn btn-secondary">Lampa не находит источники: 5 причин →</a>
+        </div>
       </section>
   
