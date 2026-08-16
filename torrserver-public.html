@@ -1,0 +1,171 @@
+---
+layout: default
+title: "Публичные TorrServer для Lampa: почему не работают и что делать (2026)"
+description: "Бесплатные публичные TorrServer для Lampa: почему free ip перестают работать, как проверить сервер и чем заменить — свой TorrServer, плагины и обход блокировок."
+keywords: "публичные торсерверы, torrserver free ip, бесплатный torrserver для lampa, torrserver 2026, торсервер для lampa, публичные парсеры для lampa"
+---
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>Публичные TorrServer для Lampa: почему не работают и что делать (в {{ site.content_month }} 2026)</h1>
+    <p class="hero-description">
+      Бесплатный публичный TorrServer — самый быстрый способ смотреть торренты в Lampa
+      без своего сервера. И самый ненадёжный: адреса умирают неделями. Разбираем, почему
+      так происходит, как проверить сервер за минуту и чем его заменить.
+    </p>
+  </div>
+</section>
+
+<nav class="page-nav">
+  <h3>Содержание:</h3>
+  <ul>
+    <li><a href="#symptoms">Симптомы</a></li>
+    <li><a href="#why">Почему публичные серверы умирают</a></li>
+    <li><a href="#check">Чек-лист диагностики</a></li>
+    <li><a href="#solutions">Решения: от бесплатных к надёжным</a></li>
+    <li><a href="#faq">Частые вопросы</a></li>
+  </ul>
+</nav>
+
+<section id="symptoms" class="content-card">
+  <h2>🔍 Симптомы: как выглядит умерший публичный TorrServer</h2>
+  <ul>
+    <li>Lampa пишет «TorrServer недоступен» или бесконечно крутит загрузку торрента</li>
+    <li>Список раздач открывается, но воспроизведение не стартует</li>
+    <li>Вчера работало, сегодня нет — адрес перестал отвечать без предупреждения</li>
+    <li>Сервер отвечает, но скорость такая, что буферизация не заканчивается</li>
+  </ul>
+</section>
+
+<section id="why" class="content-card">
+  <h2>💀 Почему бесплатные «free ip» серверы перестают работать</h2>
+  <div class="benefits-grid">
+    <div class="benefit-item">
+      <h4>📈 Перегрузка</h4>
+      <p>Один публичный сервер делят сотни пользователей: канал и диск заканчиваются, сервер падает или начинает резать скорость.</p>
+    </div>
+    <div class="benefit-item">
+      <h4>💸 Хостинг стоит денег</h4>
+      <p>Энтузиаст оплачивает VPS из своего кармана. Деньги кончаются — адрес умирает навсегда.</p>
+    </div>
+    <div class="benefit-item">
+      <h4>🚫 Блокировки</h4>
+      <p>Провайдеры и РКН блокируют популярные адреса; сервер жив, но из вашей сети недоступен.</p>
+    </div>
+    <div class="benefit-item">
+      <h4>⚠️ Злоупотребления</h4>
+      <p>Публичный адрес быстро попадает в списки абуз — хостер отключает сервер за жалобы правообладателей.</p>
+    </div>
+  </div>
+</section>
+
+<section id="check" class="content-card">
+  <h2>✅ Чек-лист: проверка TorrServer за минуту</h2>
+  <ol>
+    <li>Откройте адрес сервера в браузере (вида <code>http://адрес:8090</code>) — должна открыться веб-страница TorrServer</li>
+    <li>Если страница не открывается с телевизора, проверьте с телефона через мобильный интернет — так вы отличите смерть сервера от блокировки вашим провайдером</li>
+    <li>В Lampa: Настройки → TorrServer — проверьте, что адрес введён без опечаток и со схемой <code>http://</code></li>
+    <li>Попробуйте запустить популярную раздачу с большим числом сидов — редкие раздачи медленны на любом сервере</li>
+    <li>Если с мобильного интернета работает, а с домашнего нет — это блокировка провайдера, а не проблема сервера</li>
+  </ol>
+</section>
+
+<section id="solutions" class="content-card">
+  <h2>🛠️ Решения: от бесплатных к надёжным</h2>
+
+  <div class="steps-container">
+    <article class="step-card">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h3>Свежий публичный адрес (бесплатно, ненадолго)</h3>
+        <p>Актуальные публичные адреса появляются в тематических Telegram-чатах и на форумах.
+        Рабочий срок — от пары дней до пары недель, поэтому держите под рукой 2–3 запасных.
+        Плагин <a href="/plugins/pubtorr">PubTorr</a> подставляет список публичных серверов
+        прямо в Lampa.</p>
+      </div>
+    </article>
+
+    <article class="step-card">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h3>Свой TorrServer (бесплатно, надёжно)</h3>
+        <p>Лучшее долгосрочное решение — поднять TorrServer у себя: на Android-приставке,
+        телефоне или домашнем сервере. Пошаговая инструкция — в карточке
+        <a href="/plugins/free-torrserver">Free TorrServer</a>; плагин
+        <a href="/plugins/torrserver-etor">TorrServer Etor</a> добавит настройки прямо
+        в меню Lampa. На телевизорах LG/Samsung свой сервер не поставить —
+        смотрите разбор <a href="/plugins/webos-tizen-torrents">торрентов на webOS/Tizen</a>.</p>
+      </div>
+    </article>
+
+    <article class="step-card">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <h3>Если сервер жив, но заблокирован провайдером</h3>
+        <p>Когда адрес открывается через мобильный интернет, но не с домашнего Wi-Fi,
+        дело в блокировке. Смена DNS помогает редко — блокируют обычно по IP и через DPI.</p>
+        {% include vpn_block.html
+           title="Сервер работает, а у вас — нет?"
+           body="Провайдер блокирует адреса торрент-инфраструктуры и режет P2P-трафик через DPI. Проверка за минуту: включите VPN и обновите список — если сервер ожил, причина в блокировке."
+           cta_label="Проверить через VPN (60 секунд) →"
+           pos="mid" %}
+      </div>
+    </article>
+  </div>
+
+  <!-- PRODUCT_CTA_PLACEHOLDER -->
+</section>
+
+<section id="faq" class="content-card">
+  <h2>❓ Частые вопросы</h2>
+
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary>Где взять рабочий публичный TorrServer для Lampa?</summary>
+      <div class="faq-answer"><p>Свежие адреса публикуют тематические Telegram-чаты и форумы; плагин PubTorr подставляет список публичных серверов прямо в Lampa. Учтите: любой публичный адрес — временный, держите запасные.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Почему TorrServer перестал работать, хотя вчера работал?</summary>
+      <div class="faq-answer"><p>Типичные причины: сервер перегружен или отключён владельцем, адрес заблокирован провайдером, либо у хостера кончилось терпение из-за жалоб. Проверьте адрес с мобильного интернета — так вы поймёте, умер сервер или его заблокировали именно вам.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Что надёжнее: публичный или свой TorrServer?</summary>
+      <div class="faq-answer"><p>Свой. Публичные серверы умирают от перегрузки и блокировок; собственный TorrServer на приставке или домашнем сервере работает годами и не зависит от чужих денег на хостинг.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Можно ли поставить TorrServer прямо на телевизор?</summary>
+      <div class="faq-answer"><p>На Android TV — да, есть APK-версия. На LG webOS и Samsung Tizen — нет: там TorrServer запускают на другом устройстве в той же сети (телефон, приставка, роутер с прошивкой) и указывают его адрес в Lampa.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>TorrServer работает, но скорость низкая — что делать?</summary>
+      <div class="faq-answer"><p>Выбирайте раздачи с большим числом сидов, проверьте скорость самого интернета, а если провайдер режет P2P-трафик через DPI — помогает VPN: шифрованный трафик не распознаётся как торрент.</p></div>
+    </details>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Где взять рабочий публичный TorrServer для Lampa?", "acceptedAnswer": {"@type": "Answer", "text": "Свежие адреса публикуют тематические Telegram-чаты и форумы; плагин PubTorr подставляет список публичных серверов прямо в Lampa. Любой публичный адрес — временный, держите запасные."}},
+    {"@type": "Question", "name": "Почему TorrServer перестал работать, хотя вчера работал?", "acceptedAnswer": {"@type": "Answer", "text": "Типичные причины: сервер перегружен или отключён владельцем, адрес заблокирован провайдером, либо хостер отключил его из-за жалоб. Проверка с мобильного интернета показывает, умер сервер или заблокирован именно вам."}},
+    {"@type": "Question", "name": "Что надёжнее: публичный или свой TorrServer?", "acceptedAnswer": {"@type": "Answer", "text": "Свой. Публичные серверы умирают от перегрузки и блокировок; собственный TorrServer на приставке или домашнем сервере работает годами."}},
+    {"@type": "Question", "name": "Можно ли поставить TorrServer прямо на телевизор?", "acceptedAnswer": {"@type": "Answer", "text": "На Android TV — да, есть APK-версия. На LG webOS и Samsung Tizen — нет: там TorrServer запускают на другом устройстве в той же сети и указывают его адрес в Lampa."}},
+    {"@type": "Question", "name": "TorrServer работает, но скорость низкая — что делать?", "acceptedAnswer": {"@type": "Answer", "text": "Выбирайте раздачи с большим числом сидов, проверьте скорость интернета, а при DPI-ограничении P2P-трафика провайдером помогает VPN."}}
+  ]
+}
+</script>
+
+<section class="content-card">
+  <h2>🔗 По теме</h2>
+  <div class="links-grid">
+    <a href="/plugins/free-torrserver" class="quick-link"><span class="link-icon">🧩</span><span>Free TorrServer — свой сервер бесплатно</span></a>
+    <a href="/plugins/torrserver-etor" class="quick-link"><span class="link-icon">⚙️</span><span>TorrServer Etor — настройки в меню Lampa</span></a>
+    <a href="/plugins/pubtorr" class="quick-link"><span class="link-icon">🌐</span><span>PubTorr — публичные серверы списком</span></a>
+    <a href="/plugins/webos-tizen-torrents" class="quick-link"><span class="link-icon">📺</span><span>Торренты на LG webOS и Samsung Tizen</span></a>
+    <a href="/stability" class="quick-link"><span class="link-icon">🛡️</span><span>Обход блокировок: пошаговое руководство</span></a>
+    <a href="/plugins" class="quick-link"><span class="link-icon">🧩</span><span>Каталог всех плагинов</span></a>
+  </div>
+</section>
