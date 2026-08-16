@@ -1,0 +1,146 @@
+---
+layout: default
+title: "Рабочие плагины для Lampa — проверенный список (2026)"
+description: "Актуальный список рабочих плагинов для Lampa: онлайн-просмотр, торренты, IPTV и интерфейс. Проверяем работоспособность ежемесячно, ссылки для установки — в карточках."
+keywords: "рабочие плагины для lampa, рабочие плагины для lampa 2026, актуальные плагины lampa, плагины для lampa 2026 рабочие, проверенные плагины лампа"
+---
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>Рабочие плагины для Lampa — проверено в {{ site.content_month }} 2026</h1>
+    <p class="hero-description">
+      Плагины для Lampa регулярно умирают: хостинги закрываются, балансеры блокируются,
+      авторы бросают проекты. Здесь — актуальный срез каталога: что работает прямо сейчас,
+      по категориям, со ссылками на инструкции по установке.
+    </p>
+  </div>
+</section>
+
+<nav class="page-nav">
+  <h3>Категории:</h3>
+  <ul>
+    <li><a href="#online">Онлайн-просмотр</a></li>
+    <li><a href="#torrents">Торренты</a></li>
+    <li><a href="#iptv">IPTV и ТВ</a></li>
+    <li><a href="#stores">Магазины плагинов</a></li>
+    <li><a href="#howto">Как устанавливать</a></li>
+    <li><a href="#faq">Частые вопросы</a></li>
+  </ul>
+</nav>
+
+<section class="content-card">
+  <h2>📋 Как мы проверяем</h2>
+  <p>Раз в месяц прогоняем автоматическую проверку доступности URL каждого плагина
+  и обновляем статусы в карточках. Если плагин перестал отвечать — он помечается
+  в каталоге, а из этого списка исключается. Дата последней проверки — {{ site.content_month }} 2026.</p>
+</section>
+
+{% assign working = site.plugins | where: "status", "Активен" %}
+
+<section id="online" class="content-card">
+  <h2>🎬 Онлайн-просмотр</h2>
+  <p>Главная категория: эти плагины добавляют источники для просмотра фильмов и сериалов онлайн.</p>
+  <div class="links-grid">
+    {% assign online = working | where: "category", "Онлайн-просмотр" %}
+    {% for plugin in online %}
+    <a href="{{ plugin.url }}" class="quick-link"><span class="link-icon">{{ plugin.icon }}</span><span>{{ plugin.title }}</span></a>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="torrents" class="content-card">
+  <h2>🌐 Торренты</h2>
+  <p>Просмотр торрентов без скачивания — потребуется TorrServer
+  (если нет своего — читайте <a href="/torrserver-public">разбор публичных TorrServer</a>).</p>
+  <div class="links-grid">
+    {% assign torrents = working | where: "category", "Торренты" %}
+    {% for plugin in torrents %}
+    <a href="{{ plugin.url }}" class="quick-link"><span class="link-icon">{{ plugin.icon }}</span><span>{{ plugin.title }}</span></a>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="iptv" class="content-card">
+  <h2>📺 IPTV и ТВ</h2>
+  <div class="links-grid">
+    {% assign iptv = working | where: "category", "IPTV и ТВ" %}
+    {% for plugin in iptv %}
+    <a href="{{ plugin.url }}" class="quick-link"><span class="link-icon">{{ plugin.icon }}</span><span>{{ plugin.title }}</span></a>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="stores" class="content-card">
+  <h2>🏪 Магазины плагинов</h2>
+  <p>Один магазин даёт доступ сразу к десяткам плагинов — ставьте его первым.</p>
+  <div class="links-grid">
+    {% assign stores = working | where: "category", "Магазины" %}
+    {% for plugin in stores %}
+    <a href="{{ plugin.url }}" class="quick-link"><span class="link-icon">{{ plugin.icon }}</span><span>{{ plugin.title }}</span></a>
+    {% endfor %}
+  </div>
+  <p>Полный каталог всех {{ site.plugins | size }} плагинов, включая интерфейсные и служебные —
+  на странице <a href="/plugins">«Плагины»</a>.</p>
+</section>
+
+<section id="howto" class="content-card">
+  <h2>🔧 Как установить плагин</h2>
+  <ol>
+    <li>Откройте карточку плагина из списка выше и скопируйте URL установки</li>
+    <li>В Lampa: Настройки → Расширения → «Добавить плагин»</li>
+    <li>Вставьте URL, нажмите «Готово» и перезапустите приложение</li>
+  </ol>
+
+  {% include vpn_block.html
+     title="Плагин установлен, а источники не грузятся?"
+     body="Если плагин из рабочего списка не отдаёт контент — почти всегда это блокировка источников провайдером, а не смерть плагина. Проверка за минуту: включите VPN и обновите список источников."
+     cta_label="Проверить через VPN (60 секунд) →"
+     pos="mid" %}
+</section>
+
+<section id="faq" class="content-card">
+  <h2>❓ Частые вопросы</h2>
+
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary>Какие плагины для Lampa рабочие в 2026 году?</summary>
+      <div class="faq-answer"><p>Для онлайн-просмотра: Online Mod, Showy, Cinema и другие из списка выше. Для торрентов — связка TorrServer + торрент-плагины. Список обновляется ежемесячно автоматической проверкой доступности.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Почему плагин из списка не работает у меня?</summary>
+      <div class="faq-answer"><p>Если URL плагина отвечает (мы это проверяем), но источники не грузятся — вероятна блокировка провайдером. Проверьте через VPN; полный разбор причин — в статье «Lampa не находит источники».</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Как часто обновляется этот список?</summary>
+      <div class="faq-answer"><p>Раз в месяц: автоматическая проверка URL всех плагинов каталога плюс ручная сверка статусов. Дата текущей проверки указана в начале страницы.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Какой плагин поставить первым?</summary>
+      <div class="faq-answer"><p>Магазин плагинов (например, SkazTV Store или ByLampa Store): он открывает доступ сразу к десяткам плагинов без ручного ввода URL каждого.</p></div>
+    </details>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Какие плагины для Lampa рабочие в 2026 году?", "acceptedAnswer": {"@type": "Answer", "text": "Для онлайн-просмотра: Online Mod, Showy, Cinema и другие. Для торрентов — связка TorrServer + торрент-плагины. Список обновляется ежемесячно автоматической проверкой доступности."}},
+    {"@type": "Question", "name": "Почему плагин из списка не работает у меня?", "acceptedAnswer": {"@type": "Answer", "text": "Если URL плагина отвечает, но источники не грузятся — вероятна блокировка провайдером. Проверьте через VPN; полный разбор причин — в статье «Lampa не находит источники»."}},
+    {"@type": "Question", "name": "Как часто обновляется список рабочих плагинов?", "acceptedAnswer": {"@type": "Answer", "text": "Раз в месяц: автоматическая проверка URL всех плагинов каталога плюс ручная сверка статусов."}},
+    {"@type": "Question", "name": "Какой плагин поставить первым?", "acceptedAnswer": {"@type": "Answer", "text": "Магазин плагинов: он открывает доступ сразу к десяткам плагинов без ручного ввода URL каждого."}}
+  ]
+}
+</script>
+
+<section class="content-card">
+  <h2>🔗 По теме</h2>
+  <div class="links-grid">
+    <a href="/plugins" class="quick-link"><span class="link-icon">🧩</span><span>Полный каталог плагинов</span></a>
+    <a href="/problems/no-sources" class="quick-link"><span class="link-icon">🔍</span><span>Lampa не находит источники: 5 причин</span></a>
+    <a href="/torrserver-public" class="quick-link"><span class="link-icon">🌐</span><span>Публичные TorrServer: почему не работают</span></a>
+    <a href="/stability" class="quick-link"><span class="link-icon">🛡️</span><span>Обход блокировок</span></a>
+  </div>
+</section>
