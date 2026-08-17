@@ -36,6 +36,10 @@ img { max-width: 100%; display: block; }
 html { scroll-behavior: smooth; }
 
 body {
+  /* Страховка: элемент шире вьюпорта не должен утаскивать страницу в горизонтальный
+     скролл (clip не ломает sticky-шапку; hidden — фолбэк для старых браузеров) */
+  overflow-x: hidden;
+  overflow-x: clip;
   font-family: var(--font-body);
   background: var(--bg);
   color: var(--text);
