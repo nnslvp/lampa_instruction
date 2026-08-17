@@ -28,6 +28,8 @@ img { max-width: 100%; display: block; }
   --space-16: 4rem;
   --font-heading: 'Literata', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
+
+  --success: #15803d; /* используется кнопкой копирования в _layouts/plugin.html */
 }
 
 /* === BASE === */
@@ -90,6 +92,7 @@ code {
   border-radius: var(--radius-sm);
   font-size: 0.9em;
   color: var(--accent-hover);
+  overflow-wrap: anywhere; /* длинные URL плагинов не должны рвать мобильную вёрстку */
 }
 
 strong { color: var(--text); }
@@ -815,3 +818,359 @@ article > section > h2 {
 
 /* === AFFILIATE NOTE (дисклеймер в футере) === */
 .affiliate-note { font-size: 0.8rem; color: var(--text-muted); margin-top: var(--space-2); }
+
+/* === MOBILE: сравнительные таблицы и бейджи === */
+@media (max-width: 640px) {
+  .comparison-table th,
+  .comparison-table td { padding: var(--space-2); font-size: 0.8125rem; }
+  .rating { display: inline-block; padding: 2px var(--space-2); font-size: 0.75rem; white-space: nowrap; }
+  .method-header { flex-wrap: wrap; }
+  .effectiveness-badge { margin-left: 0; }
+}
+
+/* === STABILITY PAGE (вынесено из встроенного <style> страницы) === */
+/* Стили для страницы стабильности */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-6);
+  margin: var(--space-6) 0;
+}
+
+.stat-item {
+  text-align: center;
+  padding: var(--space-6);
+  background: var(--bg-elevated);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: var(--space-2);
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.methods-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.method-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  transition: all var(0.2s ease);
+}
+
+.method-card.featured-method {
+  border: 2px solid var(--accent);
+  background: linear-gradient(135deg, var(--bg-surface), rgba(180, 83, 9, 0.04));
+  position: relative;
+  overflow: hidden;
+}
+
+.method-card.featured-method::before {
+  content: '⭐ РЕКОМЕНДУЕТСЯ';
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background: var(--accent);
+  color: white;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.method-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.method-icon {
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-surface);
+  border-radius: 50%;
+}
+
+.effectiveness-badge {
+  margin-left: auto;
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.effectiveness-badge.high {
+  background: #15803d;
+  color: white;
+}
+
+.effectiveness-badge.medium {
+  background: #d97706;
+  color: white;
+}
+
+.effectiveness-badge.low {
+  background: #b91c1c;
+  color: white;
+}
+
+.vpn-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.vpn-feature {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.comparison-table {
+  overflow-x: auto;
+  margin: var(--space-6) 0;
+}
+
+.comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: var(--space-4);
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.comparison-table th {
+  background: var(--bg-surface);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.recommended-row {
+  background: rgba(180, 83, 9, 0.08);
+  border: 2px solid var(--accent);
+}
+
+.rating {
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.rating.excellent {
+  background: #15803d;
+  color: white;
+}
+
+.rating.good {
+  background: #d97706;
+  color: white;
+}
+
+.rating.average {
+  background: #6b7280;
+  color: white;
+}
+
+.rating.poor {
+  background: #b91c1c;
+  color: white;
+}
+
+.symptoms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-6);
+  margin: var(--space-6) 0;
+}
+
+.symptom-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  text-align: center;
+}
+
+.symptom-icon {
+  font-size: 1.875rem;
+  margin-bottom: var(--space-4);
+  display: block;
+}
+
+.quick-check {
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.emergency-solutions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.emergency-card {
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+}
+
+.emergency-card.priority-high {
+  background: linear-gradient(135deg, rgba(185, 28, 28, 0.08), rgba(217, 119, 6, 0.04));
+  border: 2px solid #b91c1c;
+}
+
+.emergency-card.priority-medium {
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.08), rgba(217, 119, 6, 0.04));
+  border: 2px solid #d97706;
+}
+
+.faq-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.faq-block {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+}
+
+.conclusion-section {
+  background: linear-gradient(135deg, var(--bg-surface), var(--bg));
+  border: 2px solid var(--accent);
+}
+
+.final-cta {
+  margin-top: var(--space-12);
+  background: var(--bg-elevated);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  text-align: center;
+}
+
+.cta-main-offer {
+  position: relative;
+  background: var(--bg-surface);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  margin-top: var(--space-6);
+}
+
+.offer-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: white;
+  padding: var(--space-1) var(--space-6);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.offer-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-2);
+  margin: var(--space-6) 0;
+}
+
+.offer-feature {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.cta-button-main {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-12);
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 24px rgba(180, 83, 9, 0.25);
+  margin: var(--space-6) 0;
+}
+
+.cta-button-main:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(180, 83, 9, 0.3);
+  color: white;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .methods-container {
+    gap: var(--space-6);
+  }
+  
+  .method-card.featured-method::before {
+    position: static;
+    display: block;
+    text-align: center;
+    margin-bottom: var(--space-4);
+  }
+  
+  .method-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .vpn-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparison-table {
+    font-size: 0.875rem;
+  }
+  
+  .symptoms-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .offer-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-button-main {
+    font-size: 1.125rem;
+    padding: var(--space-6) var(--space-8);
+  }
+}
